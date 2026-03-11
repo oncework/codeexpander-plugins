@@ -1,0 +1,28 @@
+{
+  "name": "@codeexpander/plugin-demo-tauri-window",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.html",
+  "description": "CodeExpander plugin demo: Tauri window API",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp plugin.json dist/ && node -e \"const fs=require('fs');const p=require('./dist/plugin.json');p.main='index.html';fs.writeFileSync('dist/plugin.json',JSON.stringify(p,null,2));\"",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.10.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  }
+}

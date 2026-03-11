@@ -1,0 +1,37 @@
+{
+  "main": "dist/index.html",
+  "title": "Demo: Tauri 窗口 API",
+  "description": "CodeExpander 插件 demo：展示 @tauri-apps/api 窗口 API 完整功能。需「以插件窗口打开」才能使用。",
+  "category": "demo",
+  "order": 90,
+  "features": [
+    { "code": "tauri_window", "explain": "Tauri 窗口 API 演示：尺寸、位置、置顶、标题等", "cmds": ["tauri", "window", "窗口"] }
+  ],
+  "pluginSetting": {
+    "height": 560,
+    "width": 520,
+    "minWidth": 400,
+    "minHeight": 400,
+    "maxWidth": 800,
+    "maxHeight": 900,
+    "alwaysOnTop": false,
+    "resizable": true,
+    "decorations": true,
+    "permissions": [
+      "core:window:allow-set-size",
+      "core:window:allow-set-position",
+      "core:window:allow-set-title",
+      "core:window:allow-set-always-on-top",
+      "core:window:allow-set-min-size",
+      "core:window:allow-set-max-size",
+      "core:window:allow-center",
+      "core:window:allow-minimize",
+      "core:window:allow-maximize",
+      "core:window:allow-unmaximize",
+      "core:window:allow-set-fullscreen",
+      "core:window:allow-set-focus",
+      "core:window:allow-close",
+      "core:window:allow-request-user-attention"
+    ]
+  }
+}

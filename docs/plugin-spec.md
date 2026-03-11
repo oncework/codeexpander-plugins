@@ -2,8 +2,8 @@
 
 Clear, numbered guide for **humans** and **AI tools** to build and manage CodeExpander plugins.
 
-- **If you are a human developer**: read Sections **1 → 5** to create a plugin, and Section **7** for import options.  
-- **If you are an AI tool (via MCP)**: use the manifest rules in Section **3** and the MCP tools in Section **6**.
+- **If you are a human developer**: read Sections **1 → 5** to create a plugin, and Section **8** for import options.  
+- **If you are an AI tool (via MCP)**: use the manifest rules in Section **3** and the MCP tools in Section **7**.
 
 ---
 
@@ -73,6 +73,17 @@ When you import from directory, binary image files are stored as **base64** in t
   - **transparent** (boolean) — Transparent background; default `false`. **Applied only when the window is first created** (cannot be changed later for that window).
   - **decorations** (boolean) — Show title bar; default `true`. **Applied only at first creation.**
   - **resizable** (boolean) — Allow user resize; default `true`. **Applied only at first creation.**
+  - **permissions** (array of strings) — Tauri permission identifiers the plugin needs at runtime. The host dynamically grants these via `add_capability` when showing the plugin window. Declare full identifiers, e.g. `core:window:allow-set-size`, `core:window:allow-set-position`. If omitted or empty, no extra permissions are granted. Example:
+
+```json
+"pluginSetting": {
+  "permissions": [
+    "core:window:allow-set-size",
+    "core:window:allow-set-position",
+    "core:window:allow-set-title"
+  ]
+}
+```
 
 **Runtime changes after init**  
 When the plugin runs in the **standalone plugin window** (“open as plugin window”), the plugin has access to the Tauri window API (e.g. via `@tauri-apps/api/window`). After the window is created, the plugin can call `getCurrentWindow()` and then adjust at runtime: **size** (`setSize`), **min/max size** (`setMinSize`, `setMaxSize`), **alwaysOnTop** (`setAlwaysOnTop`), **position** (`setPosition`), **title** (`setTitle`). Properties that are fixed at creation (**transparent**, **decorations**, **resizable**) cannot be changed later for that window.
@@ -133,14 +144,53 @@ Use `backend` when you need a separate process (Node, Python, Shell, or any exec
 
 ---
 
-## 4. Host APIs (plugin runtime)
+## 4. Tauri plugins & capabilities (CodeExpander host)
 
-### 4.1 Data passed into the plugin
+CodeExpander initializes the following Tauri plugins. Snippet plugins run inside webviews that match specific capabilities; not all plugin APIs are available to every plugin window.
+
+### 4.1 Tauri plugins initialized
+
+| Plugin | Purpose |
+|--------|---------|
+| `tauri_plugin_log` | Logging to app log dir |
+| `tauri_plugin_opener` | Open URLs / reveal in Finder |
+| `tauri_plugin_shell` | Execute shell commands |
+| `tauri_plugin_clipboard_x` | Clipboard read/write |
+| `tauri_plugin_global_shortcut` | Register global shortcuts |
+| `tauri_plugin_fs` | File system access |
+| `tauri_plugin_http` | HTTP requests |
+| `tauri_plugin_notification` | Desktop notifications |
+| Custom `codeexpander-plugin://` | Plugin file protocol |
+
+### 4.2 Plugin window contexts & capabilities
+
+Snippet plugins run in one of these contexts:
+
+| Context | Window/Webview | Capability file | Use case |
+|---------|----------------|-----------------|----------|
+| **Standalone** | `plugin_content_only` | `default` | "Open as plugin window" (right‑click) |
+| **Search pane** | `search` + webview `search_plugin_content` | `default` | Plugin mode in search window |
+| **Legacy** | `plugin_content` | `plugin_content` | Old plugin hub child (fewer permissions) |
+
+The `default` capability grants: `core` (window show/hide/close/focus/center/position/theme/title/always-on-top/dragging), `opener`, `shell`, `clipboard-x`, `global-shortcut`, `notification`, `fs` (scoped paths), `http`, `log`. **Note:** `core:window:allow-set-size` is **not** in the default capability; plugins that need `window.setSize()` must declare it in `pluginSetting.permissions`.
+
+### 4.3 Host-injected APIs vs Tauri API
+
+| API | Source | Notes |
+|-----|--------|------|
+| `writeClipboard` / `showToast` / `callBackend` | `window.__codeexpander` (injected) | Always available; no capability needed |
+| `@tauri-apps/api` (window, fs, http, etc.) | Tauri API | Requires matching capability; `pluginSetting.permissions` can add more at runtime |
+
+---
+
+## 5. Host APIs (plugin runtime)
+
+### 5.1 Data passed into the plugin
 
 1. **initialPayload** — an object passed when the plugin opens (for example, `{ keyword, files }`).  
 2. Your UI can read it via `window.__codeexpander_initial_payload`.
 
-### 4.2 Sending actions back to CodeExpander
+### 5.2 Sending actions back to CodeExpander
 
 Use `postMessage` from the plugin webview to call a **limited, safe set of actions**:
 
@@ -164,7 +214,7 @@ window.parent.postMessage(
 
 Only these `action` values are supported: **`writeClipboard`** and **`showToast`**.
 
-### 4.3 Browser JS module plugins
+### 5.3 Browser JS module plugins
 
 Instead of an HTML entry file, `main` can point to a JS module, for example:
 
@@ -184,7 +234,7 @@ You are responsible for bundling any npm dependencies into browser‑compatible 
 
 ---
 
-## 5. Backend protocol & lifecycle
+## 6. Backend protocol & lifecycle
 
 Any backend runtime (the executable configured in `backend.runtime`) receives **one JSON object** on `stdin`, for example:
 
@@ -222,7 +272,7 @@ The contract is:
 
 ---
 
-## 6. CodeExpander as an MCP server (for AI tools)
+## 7. CodeExpander as an MCP server (for AI tools)
 
 CodeExpander can expose an MCP (Model Context Protocol) server so any MCP client (Cursor, Claude Desktop, etc.) can **create and list plugins without manual import**.
 
@@ -232,7 +282,7 @@ CodeExpander can expose an MCP (Model Context Protocol) server so any MCP client
 2. In the **CodeExpander as MCP server** section, enable **MCP server** and set a **Port** (`0` = off, `1–65535` = valid port).  
 3. Save. When enabled, CodeExpander shows a **Connection URL**, for example: `http://127.0.0.1:PORT/mcp`.
 
-### 6.2 Adding CodeExpander to your AI assistant
+### 7.2 Adding CodeExpander to your AI assistant
 
 1. **Cursor**
    - Copy the generated `mcp.json` snippet from CodeExpander.  
@@ -244,7 +294,7 @@ CodeExpander can expose an MCP (Model Context Protocol) server so any MCP client
    - Use the MCP Streamable HTTP transport.  
    - Send JSON‑RPC POST requests with `Content-Type: application/json` to the `/mcp` endpoint.
 
-### 6.3 Available MCP tools
+### 7.3 Available MCP tools
 
 | Tool | Description |
 |------|-------------|
@@ -254,7 +304,7 @@ CodeExpander can expose an MCP (Model Context Protocol) server so any MCP client
 
 After a successful **create_plugin** call, the new plugin appears **immediately** in CodeExpander’s search and plugin list.
 
-### 6.4 Free plan limits (also applied to MCP)
+### 7.4 Free plan limits (also applied to MCP)
 
 To stay consistent with in‑app limits, MCP‑created plugins follow the same free tier quotas:
 
@@ -265,7 +315,7 @@ To stay consistent with in‑app limits, MCP‑created plugins follow the same f
 
 ---
 
-## 7. Using plugins without MCP (manual import)
+## 8. Using plugins without MCP (manual import)
 
 If you do not use MCP, you can still add plugins to CodeExpander in two ways:
 
