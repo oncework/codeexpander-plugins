@@ -1,7 +1,9 @@
 {
   "name": "@codeexpander/plugin-demo-python-http",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "CodeExpander plugin demo: Python backend http mode",
-  "scripts": { "build": "echo 'No build needed'" }
+  "scripts": {
+    "build": "echo 'No build needed'"
+  }
 }
