@@ -1,0 +1,1 @@
+{"main":"dist/index.html","title":"Convertors","description": "Convertors: date-time, base, color, YAML/JSON/TOML/XML/Markdown, list, temperature. EN | 转换器：日期、进制、颜色、格式互转、列表、温度。","category":"convertors","order":4,"features":[{"code":"convert","explain":"Various format converters","cmds":["convert","yaml","json","xml"]}],"pluginSetting":{"height":800,"width":1200}}

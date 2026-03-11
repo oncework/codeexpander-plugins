@@ -1,0 +1,31 @@
+{
+  "common": {
+    "error": "Error"
+  },
+  "tools": {
+    "website-rank-tracker": "Website Rank Tracker"
+  },
+  "websiteRankTracker": {
+    "title": "Website Rank Tracker",
+    "subtitle": "Track and compare website rankings over time using Tranco data. Compare up to 2 domains side by side.",
+    "errorNoData": "No valid ranking data found for any of the provided domains. Please check the domain names and try again.",
+    "errorFetch": "An error occurred while fetching data",
+    "domainInputTitle": "Domain Input",
+    "domainInputDescription": "Enter website domains to compare (e.g., example.com or https://www.example.com). You can compare up to 2 domains.",
+    "domainLabel": "Website Domain ",
+    "placeholder": "example.com",
+    "addDomain": "Add Domain",
+    "loading": "Loading",
+    "compareRankings": "Compare Rankings",
+    "noTrendData": "No trend data",
+    "noChange": "No change",
+    "rankDecreased": " (rank decreased)",
+    "rankImproved": " (rank improved)",
+    "chartTitle": "Ranking Comparison (",
+    "chartTitleSuffix": " domain)",
+    "chartTitleSuffixPlural": " domains)",
+    "chartDescription": "Website rankings over time (lower numbers are better)",
+    "noData": "No data",
+    "lowerRanksBetter": "Lower ranks are better positions"
+  }
+}

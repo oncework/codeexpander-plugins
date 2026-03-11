@@ -1,0 +1,103 @@
+{
+  "common": {
+    "copy": "复制",
+    "copied": "已复制！"
+  },
+  "tools": {
+    "uuid-generator": "UUID 生成",
+    "lorem-generator": "Lorem 文本",
+    "fake-data-generator": "假数据",
+    "random-phone-generator": "随机电话",
+    "random-email-generator": "随机邮箱",
+    "iso-generator": "ISO 8601"
+  },
+  "uuidGenerator": {
+    "versionLabel": "UUID 版本",
+    "countLabel": "数量（最多 50）",
+    "v4": "版本 4（随机）",
+    "v1": "版本 1（基于时间戳）",
+    "generateBtn": "生成新 UUID",
+    "copyAll": "全部复制",
+    "generatedTitle": "生成的 UUID",
+    "infoTitle": "UUID 说明",
+    "infoV4": "版本 4（随机）：使用随机或伪随机数生成，最常用。",
+    "infoV1": "版本 1（时间戳）：使用时间戳与节点 ID 生成，可能暴露生成时间与来源。",
+    "infoFormat": "格式：xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx（8-4-4-4-12 位十六进制）"
+  },
+  "loremGenerator": {
+    "typeLabel": "类型",
+    "countLabel": "数量",
+    "words": "词",
+    "sentences": "句",
+    "paragraphs": "段",
+    "generateBtn": "生成 Lorem Ipsum",
+    "generatedTitle": "生成文本",
+    "statsSuffix": " 词 · ",
+    "statsSuffix2": " 字符",
+    "aboutTitle": "Lorem Ipsum",
+    "about1": "是排版与印刷业常用的占位文本。",
+    "about2": "源自西塞罗《善恶之尽》1.10.32 与 1.10.33 节，写于公元前 45 年。"
+  },
+  "fakeDataGenerator": {
+    "fieldFirstName": "名",
+    "fieldLastName": "姓",
+    "fieldEmail": "邮箱",
+    "fieldPhone": "电话",
+    "fieldAddress": "地址",
+    "fieldCompany": "公司",
+    "fieldJobTitle": "职位",
+    "fieldDate": "日期",
+    "dataFieldsTitle": "数据字段",
+    "recordsCountLabel": "记录数",
+    "outputFormatLabel": "输出格式",
+    "json": "JSON",
+    "csv": "CSV",
+    "sql": "SQL",
+    "generateBtn": "生成假数据",
+    "generatedTitle": "生成数据（",
+    "useCases": "用途：",
+    "useCasesText": "测试应用、填充数据库、制作原型与 API 测试。",
+    "note": "说明：",
+    "noteText": "数据为随机生成的假数据，请勿用于真实场景。"
+  },
+  "randomPhoneGenerator": {
+    "title": "随机电话号码生成",
+    "description": "按各国格式生成随机电话号码",
+    "countryLabel": "国家",
+    "countryPlaceholder": "选择国家",
+    "countLabel": "数量",
+    "generateBtn": "生成",
+    "formatLabel": "格式：",
+    "singleLabel": "生成的电话号码",
+    "multipleLabel": "生成的电话号码（",
+    "multipleLabelSuffix": "）",
+    "copyAll": "全部复制"
+  },
+  "randomEmailGenerator": {
+    "title": "随机邮箱生成",
+    "description": "生成可自定义选项的随机邮箱地址",
+    "generateBtn": "生成邮箱",
+    "generateBtnPlural": "生成邮箱",
+    "numberOfEmailsLabel": "邮箱数量",
+    "domainLabel": "域名",
+    "domainPlaceholder": "选择域名",
+    "customDomainLabel": "自定义域名",
+    "customDomainPlaceholder": "example.com",
+    "optionsLabel": "选项",
+    "includeNumbers": "包含数字",
+    "includeDots": "包含点 (.)",
+    "includeUnderscores": "包含下划线 (_)",
+    "generatedEmailLabel": "生成的邮箱",
+    "generatedEmailsLabel": "生成的邮箱（",
+    "generatedEmailsLabelSuffix": "）",
+    "copyAll": "全部复制",
+    "randomDomain": "随机域名",
+    "customDomainOption": "自定义域名"
+  },
+  "isoGenerator": {
+    "currentTitle": "当前时间（实时）",
+    "customTitle": "自定义日期与时间",
+    "dateLabel": "日期",
+    "timeLabel": "时间"
+  }
+}

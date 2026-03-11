@@ -1,0 +1,46 @@
+{
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied!",
+    "error": "Error"
+  },
+  "tools": {
+    "url-encoder": "URL Encoder/Decoder",
+    "base64-encoder": "Base64 Encoder/Decoder",
+    "jwt-decoder": "JWT Decoder"
+  },
+  "urlEncoder": {
+    "inputLabel": "Input",
+    "inputPlaceholder": "Enter text or URL to encode/decode...",
+    "encode": "Encode",
+    "decode": "Decode",
+    "errorEncode": "Error: Invalid input for encoding",
+    "errorDecode": "Error: Invalid input for decoding"
+  },
+  "base64Encoder": {
+    "inputLabel": "Input",
+    "inputPlaceholder": "Enter text or Base64 string...",
+    "encode": "Encode to Base64",
+    "decode": "Decode from Base64",
+    "encodedLabel": "Base64 Encoded",
+    "decodedLabel": "Decoded",
+    "errorEncode": "Error: Invalid input for encoding",
+    "errorDecode": "Error: Invalid Base64 string"
+  },
+  "jwtDecoder": {
+    "tokenLabel": "JWT Token",
+    "tokenPlaceholder": "Paste your JWT token here...",
+    "invalidJwt": "Invalid JWT:",
+    "errorInvalidFormat": "Invalid JWT format",
+    "header": "Header",
+    "payload": "Payload",
+    "signature": "Signature",
+    "unknown": "Unknown",
+    "expired": "Expired",
+    "valid": "Valid",
+    "issuedAt": "Issued At:",
+    "expiresAt": "Expires At:",
+    "notBefore": "Not Before:",
+    "signatureNote": "Signature verification requires the secret key"
+  }
+}

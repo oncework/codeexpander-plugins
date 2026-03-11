@@ -1,0 +1,46 @@
+{
+  "common": {
+    "copy": "复制",
+    "copied": "已复制！",
+    "error": "错误"
+  },
+  "tools": {
+    "url-encoder": "URL 编码/解码",
+    "base64-encoder": "Base64 编码/解码",
+    "jwt-decoder": "JWT 解码"
+  },
+  "urlEncoder": {
+    "inputLabel": "输入",
+    "inputPlaceholder": "输入要编码/解码的文本或 URL...",
+    "encode": "编码",
+    "decode": "解码",
+    "errorEncode": "错误：编码输入无效",
+    "errorDecode": "错误：解码输入无效"
+  },
+  "base64Encoder": {
+    "inputLabel": "输入",
+    "inputPlaceholder": "输入文本或 Base64 字符串...",
+    "encode": "编码为 Base64",
+    "decode": "从 Base64 解码",
+    "encodedLabel": "Base64 编码结果",
+    "decodedLabel": "解码结果",
+    "errorEncode": "错误：编码输入无效",
+    "errorDecode": "错误：无效的 Base64 字符串"
+  },
+  "jwtDecoder": {
+    "tokenLabel": "JWT 令牌",
+    "tokenPlaceholder": "在此粘贴 JWT 令牌...",
+    "invalidJwt": "无效的 JWT：",
+    "errorInvalidFormat": "JWT 格式无效",
+    "header": "Header",
+    "payload": "Payload",
+    "signature": "Signature",
+    "unknown": "未知",
+    "expired": "已过期",
+    "valid": "有效",
+    "issuedAt": "签发时间：",
+    "expiresAt": "过期时间：",
+    "notBefore": "生效时间：",
+    "signatureNote": "验证签名需要密钥"
+  }
+}

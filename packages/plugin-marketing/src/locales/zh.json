@@ -1,0 +1,31 @@
+{
+  "common": {
+    "error": "错误"
+  },
+  "tools": {
+    "website-rank-tracker": "网站排名"
+  },
+  "websiteRankTracker": {
+    "title": "网站排名追踪",
+    "subtitle": "使用 Tranco 数据追踪与对比网站排名变化，最多可对比 2 个域名。",
+    "errorNoData": "未找到任何有效排名数据，请检查域名后重试。",
+    "errorFetch": "获取数据时发生错误",
+    "domainInputTitle": "域名输入",
+    "domainInputDescription": "输入要对比的网站域名（如 example.com 或 https://www.example.com），最多可对比 2 个域名。",
+    "domainLabel": "网站域名 ",
+    "placeholder": "example.com",
+    "addDomain": "添加域名",
+    "loading": "加载中",
+    "compareRankings": "对比排名",
+    "noTrendData": "无趋势数据",
+    "noChange": "无变化",
+    "rankDecreased": "（排名下降）",
+    "rankImproved": "（排名上升）",
+    "chartTitle": "排名对比（",
+    "chartTitleSuffix": " 个域名）",
+    "chartTitleSuffixPlural": " 个域名）",
+    "chartDescription": "网站排名随时间变化（数值越小越好）",
+    "noData": "无数据",
+    "lowerRanksBetter": "排名数字越小表示位置越靠前"
+  }
+}

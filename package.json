@@ -1,0 +1,16 @@
+{
+  "name": "codeexpander-dev-tools",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @codeexpander/plugin-text run dev",
+    "build": "pnpm run build:plugins",
+    "build:plugins": "pnpm --filter './packages/plugin-*' run build",
+    "publish:plugins": "pnpm run build:plugins && pnpm --filter './packages/plugin-*' publish -r --no-git-checks",
+    "lint": "pnpm -r run lint 2>/dev/null || true"
+  },
+  "engines": {
+    "packageManager": "pnpm>=9.0.0"
+  }
+}

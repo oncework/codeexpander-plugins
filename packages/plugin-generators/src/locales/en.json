@@ -1,0 +1,103 @@
+{
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "tools": {
+    "uuid-generator": "UUID Generator",
+    "lorem-generator": "Lorem Ipsum",
+    "fake-data-generator": "Fake Data",
+    "random-phone-generator": "Random Phone",
+    "random-email-generator": "Random Email",
+    "iso-generator": "ISO 8601"
+  },
+  "uuidGenerator": {
+    "versionLabel": "UUID Version",
+    "countLabel": "Count (max 50)",
+    "v4": "Version 4 (Random)",
+    "v1": "Version 1 (Timestamp-based)",
+    "generateBtn": "Generate New UUIDs",
+    "copyAll": "Copy All",
+    "generatedTitle": "Generated UUIDs",
+    "infoTitle": "UUID Information",
+    "infoV4": "Version 4 (Random): Generated using random or pseudo-random numbers. Most commonly used.",
+    "infoV1": "Version 1 (Timestamp-based): Generated using timestamp and node ID. Can reveal information about when and where it was generated.",
+    "infoFormat": "Format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (8-4-4-4-12 hexadecimal digits)"
+  },
+  "loremGenerator": {
+    "typeLabel": "Type",
+    "countLabel": "Count",
+    "words": "Words",
+    "sentences": "Sentences",
+    "paragraphs": "Paragraphs",
+    "generateBtn": "Generate Lorem Ipsum",
+    "generatedTitle": "Generated Text",
+    "statsSuffix": " words • ",
+    "statsSuffix2": " characters",
+    "aboutTitle": "Lorem Ipsum",
+    "about1": "is placeholder text commonly used in the printing and typesetting industry.",
+    "about2": "It's derived from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" by Cicero, written in 45 BC."
+  },
+  "fakeDataGenerator": {
+    "fieldFirstName": "First name",
+    "fieldLastName": "Last name",
+    "fieldEmail": "Email",
+    "fieldPhone": "Phone",
+    "fieldAddress": "Address",
+    "fieldCompany": "Company",
+    "fieldJobTitle": "Job title",
+    "fieldDate": "Date",
+    "dataFieldsTitle": "Data Fields",
+    "recordsCountLabel": "Records Count",
+    "outputFormatLabel": "Output Format",
+    "json": "JSON",
+    "csv": "CSV",
+    "sql": "SQL",
+    "generateBtn": "Generate Fake Data",
+    "generatedTitle": "Generated Data (",
+    "useCases": "Use Cases:",
+    "useCasesText": "Testing applications, populating databases, creating mockups, and API testing.",
+    "note": "Note:",
+    "noteText": "This data is completely fake and randomly generated. Do not use for any real purposes."
+  },
+  "randomPhoneGenerator": {
+    "title": "Random Phone Number Generator",
+    "description": "Generate random phone numbers for different countries in their respective formats",
+    "countryLabel": "Country",
+    "countryPlaceholder": "Select country",
+    "countLabel": "Count",
+    "generateBtn": "Generate",
+    "formatLabel": "Format: ",
+    "singleLabel": "Generated Phone Number",
+    "multipleLabel": "Generated Phone Numbers (",
+    "multipleLabelSuffix": ")",
+    "copyAll": "Copy All"
+  },
+  "randomEmailGenerator": {
+    "title": "Random Email Generator",
+    "description": "Generate random email addresses with customizable options",
+    "generateBtn": "Generate Email",
+    "generateBtnPlural": "Generate Emails",
+    "numberOfEmailsLabel": "Number of Emails",
+    "domainLabel": "Domain",
+    "domainPlaceholder": "Select domain",
+    "customDomainLabel": "Custom Domain",
+    "customDomainPlaceholder": "example.com",
+    "optionsLabel": "Options",
+    "includeNumbers": "Include Numbers",
+    "includeDots": "Include Dots (.)",
+    "includeUnderscores": "Include Underscores (_)",
+    "generatedEmailLabel": "Generated Email",
+    "generatedEmailsLabel": "Generated Emails (",
+    "generatedEmailsLabelSuffix": ")",
+    "copyAll": "Copy All",
+    "randomDomain": "Random Domain",
+    "customDomainOption": "Custom Domain"
+  },
+  "isoGenerator": {
+    "currentTitle": "Current Time (Live)",
+    "customTitle": "Custom Date & Time",
+    "dateLabel": "Date",
+    "timeLabel": "Time"
+  }
+}

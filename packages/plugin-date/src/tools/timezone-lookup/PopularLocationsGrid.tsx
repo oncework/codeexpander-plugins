@@ -1,0 +1,35 @@
+
+import { Button, Label } from "@codeexpander/dev-tools-ui";
+import { MapPin } from "lucide-react";
+import { useI18n } from "../../context";
+import { popularLocations } from './timezoneData';
+
+interface PopularLocationsGridProps {
+  onQuickSearch: (query: string) => void;
+  isLoading: boolean;
+}
+
+const PopularLocationsGrid = ({ onQuickSearch, isLoading }: PopularLocationsGridProps) => {
+  const { t } = useI18n();
+  return (
+    <div>
+      <Label>{t("timezoneLookup.popularLocations")}</Label>
+      <div className="flex flex-wrap gap-2 mt-2">
+        {popularLocations.map((location) => (
+          <Button
+            key={location.query}
+            variant="outline"
+            size="sm"
+            onClick={() => onQuickSearch(location.query)}
+            disabled={isLoading}
+          >
+            <MapPin className="w-3 h-3 mr-1" />
+            {location.name}
+          </Button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default PopularLocationsGrid;

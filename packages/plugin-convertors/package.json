@@ -1,0 +1,52 @@
+{
+  "name": "@codeexpander/plugin-convertors",
+  "version": "0.1.6",
+  "private": false,
+  "type": "module",
+  "main": "dist/index.html",
+  "files": [
+    "dist",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "CodeExpander plugin: convertors (date-time, base, color, YAML/JSON/TOML/XML/Markdown, list, temperature). 转换器：日期、进制、颜色、格式互转、列表、温度。",
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "convert",
+    "yaml",
+    "json",
+    "xml",
+    "toml",
+    "markdown",
+    "转换器"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp plugin.json dist/ && node -e \"const fs=require('fs');const p=require('./dist/plugin.json');p.main='index.html';fs.writeFileSync('dist/plugin.json',JSON.stringify(p,null,2));\"",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@codeexpander/dev-tools-i18n": "workspace:*",
+    "@codeexpander/dev-tools-ui": "workspace:*",
+    "@codeexpander/plugin-types": "workspace:*",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.11",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  }
+}

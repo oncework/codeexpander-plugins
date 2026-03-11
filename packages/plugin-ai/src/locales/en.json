@@ -1,0 +1,29 @@
+{
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "tools": {
+    "tokenizer": "Tokenizer"
+  },
+  "tokenizer": {
+    "title": "Text Tokenizer",
+    "subtitle": "Analyze how text is tokenized by different language models and see token counts",
+    "textInputTitle": "Text Input",
+    "textInputDescription": "Enter text to see how it would be tokenized by different language models",
+    "labelTextToTokenize": "Text to Tokenize",
+    "placeholder": "Enter your text here to see how it gets tokenized...",
+    "tokenizeButton": "Tokenize Text",
+    "copyInputTitle": "Copy input",
+    "tokensSuffix": " tokens",
+    "noTokens": "No tokens generated",
+    "modelGptStyle": "GPT-style",
+    "modelWordBased": "Word-based",
+    "modelCharLevel": "Character-level",
+    "modelSubword": "Subword (BPE-like)",
+    "descGptStyle": "Word and character level tokenization similar to GPT models",
+    "descWordBased": "Simple word-based tokenization",
+    "descCharLevel": "Individual character tokenization",
+    "descSubword": "Byte-pair encoding style subword tokenization"
+  }
+}

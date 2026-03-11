@@ -1,0 +1,35 @@
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from "@codeexpander/dev-tools-ui";
+import { useI18n } from "../../context";
+
+const CurrentEpochDisplay = () => {
+  const { t } = useI18n();
+  const [currentEpoch, setCurrentEpoch] = useState(Math.floor(Date.now() / 1000));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentEpoch(Math.floor(Date.now() / 1000));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="text-center text-lg md:text-xl">{t("epochConverter.currentEpochTitle")}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="text-center">
+          <div className="text-2xl md:text-3xl font-mono font-bold text-blue-600 dark:text-blue-400 mb-2 break-all">
+            {currentEpoch}
+          </div>
+          <div className="text-xs md:text-sm text-gray-600 dark:text-slate-400 break-all">
+            {new Date().toUTCString()}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
+export default CurrentEpochDisplay;

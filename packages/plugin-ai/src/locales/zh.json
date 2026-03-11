@@ -1,0 +1,29 @@
+{
+  "common": {
+    "copy": "复制",
+    "copied": "已复制！"
+  },
+  "tools": {
+    "tokenizer": "分词器"
+  },
+  "tokenizer": {
+    "title": "文本分词器",
+    "subtitle": "分析文本在不同语言模型下的分词方式并查看 token 数量",
+    "textInputTitle": "文本输入",
+    "textInputDescription": "输入文本以查看不同语言模型的分词结果",
+    "labelTextToTokenize": "待分词文本",
+    "placeholder": "在此输入文本以查看分词结果...",
+    "tokenizeButton": "分词",
+    "copyInputTitle": "复制输入",
+    "tokensSuffix": " 个 token",
+    "noTokens": "未生成 token",
+    "modelGptStyle": "GPT 风格",
+    "modelWordBased": "按词",
+    "modelCharLevel": "按字符",
+    "modelSubword": "子词（类 BPE）",
+    "descGptStyle": "类似 GPT 的按词与字符混合分词",
+    "descWordBased": "简单按词分词",
+    "descCharLevel": "按单字符分词",
+    "descSubword": "类字节对编码的子词分词"
+  }
+}

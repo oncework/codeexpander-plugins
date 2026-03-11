@@ -1,0 +1,10 @@
+{
+  "name": "@codeexpander/plugin-types",
+  "version": "0.0.6",
+  "private": true,
+  "description": "Shared TypeScript types for CodeExpander plugins (Window bridge).",
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts"
+  ]
+}

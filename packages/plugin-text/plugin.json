@@ -1,0 +1,21 @@
+{
+  "main": "dist/index.html",
+  "title": "Text Tools",
+  "description": "Text utilities: word/character counter, text diff, case converter, regex tester, find & replace, prefix/suffix, line breaks, remove duplicate/empty/extra lines, em dash replacer. EN | 文本工具：字数统计、文本对比、大小写转换、正则、查找替换等。",
+  "category": "text",
+  "order": 1,
+  "features": [
+    { "code": "word_counter", "explain": "Count words, characters, and lines in text", "cmds": ["word count", "character count"] },
+    { "code": "text_diff", "explain": "Compare two texts and highlight differences", "cmds": ["diff", "compare text"] },
+    { "code": "case_convert", "explain": "Convert text between uppercase, lowercase, camelCase", "cmds": ["case", "uppercase", "lowercase"] },
+    { "code": "regex_tester", "explain": "Test and debug regular expressions", "cmds": ["regex", "pattern"] },
+    { "code": "find_replace", "explain": "Find and replace text", "cmds": ["find replace", "search substitute"] },
+    { "code": "prefix_suffix", "explain": "Add prefix or suffix to each line", "cmds": ["prefix", "suffix", "lines"] },
+    { "code": "line_breaks", "explain": "Add or remove line breaks", "cmds": ["line break", "wrap"] },
+    { "code": "remove_duplicate_lines", "explain": "Remove duplicate lines", "cmds": ["dedupe lines"] },
+    { "code": "remove_empty_lines", "explain": "Remove empty lines", "cmds": ["empty lines"] },
+    { "code": "remove_extra_spaces", "explain": "Trim and normalize whitespace", "cmds": ["trim", "spaces"] },
+    { "code": "em_dash", "explain": "Replace em dashes with other punctuation", "cmds": ["em dash"] }
+  ],
+  "pluginSetting": { "height": 800, "width": 1200 }
+}
