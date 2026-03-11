@@ -1,0 +1,7 @@
+{
+  "name": "@codeexpander/plugin-demo-php-stdio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CodeExpander plugin demo: PHP backend stdio mode",
+  "scripts": { "build": "echo 'No build needed'" }
+}

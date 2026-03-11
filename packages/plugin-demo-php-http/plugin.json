@@ -1,0 +1,16 @@
+{
+  "main": "index.html",
+  "title": "Demo: HTTP Backend (PHP)",
+  "description": "CodeExpander 插件 demo [PHP]：后端 http 模式。常驻进程，通过 HTTP POST 通信，可复用连接。",
+  "category": "demo-php",
+  "order": 131,
+  "features": [
+    { "code": "text_transform", "explain": "文本转换演示 PHP http 后端", "cmds": ["demo http", "php http"] }
+  ],
+  "pluginSetting": { "height": 400, "width": 500 },
+  "backend": {
+    "runtime": "php",
+    "entry": "backend.php",
+    "mode": "http"
+  }
+}

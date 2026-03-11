@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo: HTTP Backend (Ruby)</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 16px; margin: 0; }
+    h2 { margin-top: 0; color: #333; }
+    textarea { width: 100%; min-height: 80px; padding: 8px; font-size: 14px; }
+    .actions { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    button { padding: 8px 16px; cursor: pointer; background: #cc342d; color: white; border: none; border-radius: 6px; }
+    button:hover { background: #a32b26; }
+    .result { margin-top: 12px; padding: 12px; background: #ecfdf5; border-radius: 6px; white-space: pre-wrap; }
+    .status { font-size: 12px; color: #64748b; margin-top: 8px; }
+    .error { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <h2>HTTP 模式 Demo (Ruby)</h2>
+  <p>后端进程常驻，多次调用复用同一进程，通过 HTTP POST 通信。</p>
+  <textarea id="input" placeholder="输入要转换的文本...">Hello CodeExpander</textarea>
+  <div class="actions">
+    <button data-action="upper">转大写</button>
+    <button data-action="lower">转小写</button>
+    <button data-action="reverse">反转</button>
+    <button id="ping">Ping 后端</button>
+  </div>
+  <div class="result" id="result"></div>
+  <div class="status" id="status"></div>
+  <script>
+    const input = document.getElementById("input");
+    const result = document.getElementById("result");
+    const status = document.getElementById("status");
+    function setStatus(msg, isError) {
+      status.textContent = msg;
+      status.className = "status" + (isError ? " error" : "");
+    }
+    async function call(method, payload) {
+      setStatus("调用中...");
+      try {
+        const bridge = window.__codeexpander;
+        if (!bridge?.callBackend) throw new Error("callBackend 不可用，请在 CodeExpander 中运行此插件");
+        const res = await bridge.callBackend(method, payload);
+        result.textContent = typeof res === "object" ? JSON.stringify(res, null, 2) : res;
+        setStatus("完成");
+      } catch (e) {
+        setStatus("错误: " + e.message, true);
+        result.textContent = String(e);
+      }
+    }
+    document.querySelectorAll("[data-action]").forEach((btn) => {
+      btn.addEventListener("click", () => call("run", { text: input.value, action: btn.dataset.action }));
+    });
+    document.getElementById("ping").addEventListener("click", () => call("ping", {}));
+  </script>
+</body>
+</html>
