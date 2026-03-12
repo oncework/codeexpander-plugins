@@ -1,16 +1,23 @@
 {
   "main": "index.html",
   "title": "Demo: Stdio Backend (Shell)",
-  "description": "CodeExpander 插件 demo [Shell]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。依赖 jq 解析 JSON。",
+  "description": "CodeExpander plugin demo [Shell]: backend stdio mode. Each call spawns a new process, communicates via stdin/stdout. Requires jq for JSON parsing.",
   "category": "demo-shell",
   "order": 140,
   "features": [
-    { "code": "text_transform", "explain": "文本转换演示 Shell stdio 后端", "cmds": ["demo stdio", "shell stdio"] }
+    { "code": "text_transform", "explain": "Text transform demo for Shell stdio backend", "cmds": ["demo stdio", "shell stdio"] }
   ],
   "pluginSetting": { "height": 400, "width": 500 },
   "backend": {
     "runtime": "sh",
     "entry": "backend.sh",
     "mode": "stdio"
+  },
+  "i18n": {
+    "zh_CN": {
+      "title": "Demo：Stdio 后端 (Shell)",
+      "description": "CodeExpander 插件 demo [Shell]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。依赖 jq 解析 JSON。",
+      "category": "演示"
+    }
   }
 }

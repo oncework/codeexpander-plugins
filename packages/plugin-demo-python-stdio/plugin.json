@@ -1,16 +1,23 @@
 {
   "main": "index.html",
   "title": "Demo: Stdio Backend (Python)",
-  "description": "CodeExpander 插件 demo [Python]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。",
+  "description": "CodeExpander plugin demo [Python]: backend stdio mode. Each call spawns a new process, communicates via stdin/stdout.",
   "category": "demo-python",
   "order": 110,
   "features": [
-    { "code": "text_transform", "explain": "文本转换演示 Python stdio 后端", "cmds": ["demo stdio", "python stdio"] }
+    { "code": "text_transform", "explain": "Text transform demo for Python stdio backend", "cmds": ["demo stdio", "python stdio"] }
   ],
   "pluginSetting": { "height": 400, "width": 500 },
   "backend": {
     "runtime": "python3",
     "entry": "backend.py",
     "mode": "stdio"
+  },
+  "i18n": {
+    "zh_CN": {
+      "title": "Demo：Stdio 后端 (Python)",
+      "description": "CodeExpander 插件 demo [Python]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。",
+      "category": "演示"
+    }
   }
 }

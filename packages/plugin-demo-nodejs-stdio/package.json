@@ -1,8 +1,8 @@
 {
   "name": "@codeexpander/plugin-demo-nodejs-stdio",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
-  "description": "CodeExpander plugin demo: Node.js backend stdio mode",
+  "description": "Demo: Stdio Backend (Node.js) - Backend stdio mode, spawn per call. | Demo：Stdio 后端 (Node.js) - 后端 stdio 模式。",
   "scripts": {
     "build": "echo 'No build needed - plain HTML/JS'"
   }

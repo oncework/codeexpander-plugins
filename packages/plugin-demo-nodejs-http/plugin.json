@@ -1,16 +1,23 @@
 {
   "main": "index.html",
   "title": "Demo: HTTP Backend (Node.js)",
-  "description": "CodeExpander 插件 demo [Node.js]：后端 http 模式。常驻进程，通过 HTTP POST 通信，可复用连接。",
+  "description": "CodeExpander plugin demo [Node.js]: backend http mode. Long-lived process, communicates via HTTP POST, connection reused.",
   "category": "demo-nodejs",
   "order": 101,
   "features": [
-    { "code": "text_transform", "explain": "文本转换（大写、小写、反转）演示 http 常驻后端", "cmds": ["demo http", "nodejs http"] }
+    { "code": "text_transform", "explain": "Text transform (upper, lower, reverse) demo for http backend", "cmds": ["demo http", "nodejs http"] }
   ],
   "pluginSetting": { "height": 400, "width": 500 },
   "backend": {
     "runtime": "node",
     "entry": "backend.js",
     "mode": "http"
+  },
+  "i18n": {
+    "zh_CN": {
+      "title": "Demo：HTTP 后端 (Node.js)",
+      "description": "CodeExpander 插件 demo [Node.js]：后端 http 模式。常驻进程，通过 HTTP POST 通信，可复用连接。",
+      "category": "演示"
+    }
   }
 }

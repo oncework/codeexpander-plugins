@@ -1,16 +1,23 @@
 {
   "main": "index.html",
   "title": "Demo: Stdio Backend (Go)",
-  "description": "CodeExpander 插件 demo [Go]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。",
+  "description": "CodeExpander plugin demo [Go]: backend stdio mode. Each call spawns a new process, communicates via stdin/stdout.",
   "category": "demo-go",
   "order": 150,
   "features": [
-    { "code": "text_transform", "explain": "文本转换演示 Go stdio 后端", "cmds": ["demo stdio", "go stdio"] }
+    { "code": "text_transform", "explain": "Text transform demo for Go stdio backend", "cmds": ["demo stdio", "go stdio"] }
   ],
   "pluginSetting": { "height": 400, "width": 500 },
   "backend": {
     "runtime": "sh",
     "entry": "run.sh",
     "mode": "stdio"
+  },
+  "i18n": {
+    "zh_CN": {
+      "title": "Demo：Stdio 后端 (Go)",
+      "description": "CodeExpander 插件 demo [Go]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。",
+      "category": "演示"
+    }
   }
 }

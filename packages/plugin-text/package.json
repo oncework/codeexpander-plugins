@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-text",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "type": "module",
   "main": "dist/index.html",
@@ -12,7 +12,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "CodeExpander plugin: text tools (word counter, diff, case converter, regex, find/replace, line tools). 文本工具：字数统计、对比、大小写、正则、查找替换等。",
+  "description": "Text Tools - Word counter, diff, case converter, regex, find/replace, line tools. | 文本工具 - 字数统计、对比、大小写、正则、查找替换等。",
   "keywords": [
     "codeexpander",
     "plugin",

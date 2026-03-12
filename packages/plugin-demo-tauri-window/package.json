@@ -1,10 +1,10 @@
 {
   "name": "@codeexpander/plugin-demo-tauri-window",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "main": "dist/index.html",
-  "description": "CodeExpander plugin demo: Tauri window API",
+  "description": "Demo: Tauri Window API - Full @tauri-apps/api window demo. | Demo：Tauri 窗口 API - 展示窗口 API 完整功能。",
   "scripts": {
     "dev": "vite",
     "build": "vite build && cp plugin.json dist/ && node -e \"const fs=require('fs');const p=require('./dist/plugin.json');p.main='index.html';fs.writeFileSync('dist/plugin.json',JSON.stringify(p,null,2));\"",

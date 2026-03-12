@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-currency",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "type": "module",
   "main": "dist/index.html",
@@ -12,7 +12,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "CodeExpander plugin: exchange rate lookup and currency converter. 汇率查询与货币转换。",
+  "description": "Currency - Exchange rate lookup and currency converter. | 货币 - 汇率查询与货币转换。",
   "keywords": [
     "codeexpander",
     "plugin",

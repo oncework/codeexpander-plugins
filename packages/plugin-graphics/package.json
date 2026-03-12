@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-graphics",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "type": "module",
   "main": "dist/index.html",
@@ -12,7 +12,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "CodeExpander plugin: graphics (QR code, WiFi QR, color palette, HTML colors, camera, painting, image converter). 图形：二维码、配色、颜色参考、摄像头、画板、图片转换。",
+  "description": "Graphics - QR code, WiFi QR, color palette, HTML colors, camera, painting, image converter. | 图形 - 二维码、配色、颜色参考、摄像头、画板、图片转换。",
   "keywords": [
     "codeexpander",
     "plugin",

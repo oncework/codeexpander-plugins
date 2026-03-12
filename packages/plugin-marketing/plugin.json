@@ -1,1 +1,18 @@
-{"main":"dist/index.html","title":"Marketing","description": "Website rank tracker: domain ranking and stats. EN | 网站排名追踪。","category":"marketing","order":10,"features":[{"code":"rank","explain":"Website rank tracker","cmds":["rank","seo"]}],"pluginSetting":{"height":800,"width":1200}}
+{
+  "main": "dist/index.html",
+  "title": "Marketing",
+  "description": "Website rank tracker: domain ranking and stats.",
+  "category": "marketing",
+  "order": 10,
+  "features": [
+    { "code": "rank", "explain": "Website rank tracker", "cmds": ["rank", "seo"] }
+  ],
+  "pluginSetting": { "height": 800, "width": 1200 },
+  "i18n": {
+    "zh_CN": {
+      "title": "营销",
+      "description": "网站排名追踪。",
+      "category": "营销"
+    }
+  }
+}

@@ -1,1 +1,19 @@
-{"main":"dist/index.html","title":"Generators","description": "Generators: UUID, Lorem, fake data, phone, email, ISO. EN | 生成器：UUID、Lorem、假数据、手机号、邮箱、ISO。","category":"generators","order":8,"features":[{"code":"uuid","explain":"Generate UUIDs","cmds":["uuid"]},{"code":"lorem","explain":"Lorem ipsum","cmds":["lorem"]}],"pluginSetting":{"height":800,"width":1200}}
+{
+  "main": "dist/index.html",
+  "title": "Generators",
+  "description": "Generators: UUID, Lorem, fake data, phone, email, ISO.",
+  "category": "generators",
+  "order": 8,
+  "features": [
+    { "code": "uuid", "explain": "Generate UUIDs", "cmds": ["uuid"] },
+    { "code": "lorem", "explain": "Lorem ipsum", "cmds": ["lorem"] }
+  ],
+  "pluginSetting": { "height": 800, "width": 1200 },
+  "i18n": {
+    "zh_CN": {
+      "title": "生成器",
+      "description": "生成器：UUID、Lorem、假数据、手机号、邮箱、ISO。",
+      "category": "生成器"
+    }
+  }
+}

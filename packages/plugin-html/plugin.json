@@ -1,7 +1,7 @@
 {
   "main": "dist/index.html",
   "title": "HTML Tools",
-  "description": "HTML tools: minifier, beautifier, to Markdown/JSX/plain text, preview, entity encoder, WYSIWYG editor. EN | HTML工具：压缩、格式化、转Markdown/JSX、预览、实体编码、所见即所得。",
+  "description": "HTML tools: minifier, beautifier, to Markdown/JSX/plain text, preview, entity encoder, WYSIWYG editor.",
   "category": "html",
   "order": 3,
   "features": [
@@ -9,5 +9,12 @@
     { "code": "html_beautifier", "explain": "Beautify HTML", "cmds": ["html format"] },
     { "code": "html_to_markdown", "explain": "Convert HTML to Markdown", "cmds": ["html markdown"] }
   ],
-  "pluginSetting": { "height": 800, "width": 1200 }
+  "pluginSetting": { "height": 800, "width": 1200 },
+  "i18n": {
+    "zh_CN": {
+      "title": "HTML 工具",
+      "description": "HTML工具：压缩、格式化、转Markdown/JSX、预览、实体编码、所见即所得。",
+      "category": "HTML"
+    }
+  }
 }

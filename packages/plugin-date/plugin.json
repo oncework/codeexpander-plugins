@@ -1,1 +1,20 @@
-{"main":"dist/index.html","title":"Date & Time","description": "Date & time: epoch converter, cron editor, timezone lookup. EN | 日期时间：时间戳、Cron、时区查询。","category":"date","order":5,"features":[{"code":"epoch","explain":"Unix timestamp converter","cmds":["epoch","timestamp"]},{"code":"cron","explain":"Cron expression editor","cmds":["cron"]},{"code":"timezone","explain":"Timezone lookup","cmds":["timezone"]}],"pluginSetting":{"height":800,"width":1200}}
+{
+  "main": "dist/index.html",
+  "title": "Date & Time",
+  "description": "Date & time: epoch converter, cron editor, timezone lookup.",
+  "category": "date",
+  "order": 5,
+  "features": [
+    { "code": "epoch", "explain": "Unix timestamp converter", "cmds": ["epoch", "timestamp"] },
+    { "code": "cron", "explain": "Cron expression editor", "cmds": ["cron"] },
+    { "code": "timezone", "explain": "Timezone lookup", "cmds": ["timezone"] }
+  ],
+  "pluginSetting": { "height": 800, "width": 1200 },
+  "i18n": {
+    "zh_CN": {
+      "title": "日期时间",
+      "description": "日期时间：时间戳、Cron、时区查询。",
+      "category": "日期"
+    }
+  }
+}

@@ -1,1 +1,19 @@
-{"main":"dist/index.html","title":"Security","description": "Security: hash generator, htpasswd, strong password, credential detector. EN | 安全：哈希、htpasswd、强密码、凭证检测。","category":"security","order":7,"features":[{"code":"hash","explain":"Generate hashes","cmds":["hash","md5","sha"]},{"code":"password","explain":"Password generator","cmds":["password"]}],"pluginSetting":{"height":800,"width":1200}}
+{
+  "main": "dist/index.html",
+  "title": "Security",
+  "description": "Security: hash generator, htpasswd, strong password, credential detector.",
+  "category": "security",
+  "order": 7,
+  "features": [
+    { "code": "hash", "explain": "Generate hashes", "cmds": ["hash", "md5", "sha"] },
+    { "code": "password", "explain": "Password generator", "cmds": ["password"] }
+  ],
+  "pluginSetting": { "height": 800, "width": 1200 },
+  "i18n": {
+    "zh_CN": {
+      "title": "安全",
+      "description": "安全：哈希、htpasswd、强密码、凭证检测。",
+      "category": "安全"
+    }
+  }
+}

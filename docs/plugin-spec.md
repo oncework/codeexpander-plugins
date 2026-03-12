@@ -62,6 +62,7 @@ When you import from directory, binary image files are stored as **base64** in t
 | **features** | array | Feature definitions (code, explain, cmds) to help search match this plugin. |
 | **pluginSetting** | object | Optional. See **3.1.1** for fields. |
 | **url** | string | Optional. Install source. `npm:` or full CDN URL = npm package (only manifest stored in snippet); `file://` or `devlink:` = local/dev path (files read from disk at runtime). Omit = all files stored in snippet. |
+| **i18n** | object | Optional. Multi-language overrides for title, description, category. See **3.1.2**. |
 
 ### 3.1.1 `pluginSetting` (optional)
 
@@ -73,7 +74,7 @@ When you import from directory, binary image files are stored as **base64** in t
   - **transparent** (boolean) — Transparent background; default `false`. **Applied only when the window is first created** (cannot be changed later for that window).
   - **decorations** (boolean) — Show title bar; default `true`. **Applied only at first creation.**
   - **resizable** (boolean) — Allow user resize; default `true`. **Applied only at first creation.**
-  - **permissions** (array of strings) — Tauri permission identifiers the plugin needs at runtime. The host dynamically grants these via `add_capability` when showing the plugin window. Declare full identifiers, e.g. `core:window:allow-set-size`, `core:window:allow-set-position`. If omitted or empty, no extra permissions are granted. Example:
+  - **permissions** (array of strings) — Tauri permission identifiers the plugin needs at runtime. The host dynamically grants these via `add_capability` when showing the plugin window. Declare full identifiers, e.g. `core:window:allow-set-size`, `core:window:allow-set-position`. If omitted or empty, no extra permissions are granted. **Note:** Once granted, permissions apply to all plugin windows for the app lifetime (they accumulate globally). Example:
 
 ```json
 "pluginSetting": {
@@ -87,6 +88,40 @@ When you import from directory, binary image files are stored as **base64** in t
 
 **Runtime changes after init**  
 When the plugin runs in the **standalone plugin window** (“open as plugin window”), the plugin has access to the Tauri window API (e.g. via `@tauri-apps/api/window`). After the window is created, the plugin can call `getCurrentWindow()` and then adjust at runtime: **size** (`setSize`), **min/max size** (`setMinSize`, `setMaxSize`), **alwaysOnTop** (`setAlwaysOnTop`), **position** (`setPosition`), **title** (`setTitle`). Properties that are fixed at creation (**transparent**, **decorations**, **resizable**) cannot be changed later for that window.
+
+### 3.1.2 `i18n` (optional)
+
+Multi-language strings for **title**, **description**, and **category**. The host resolves display text by locale (e.g. `zh_CN`, `en`).
+
+- **Structure**: `i18n` is an object whose keys are locale codes (`en`, `zh_CN`, etc.) and values are objects mapping field names or keys to strings (e.g. `title`, `description`, `category`).
+- **Resolution order** for each field: (1) `i18n[locale].field` or `i18n.en.field` if present; (2) if the main field value looks like `{{key}}`, look up that key in `i18n[locale]` or `i18n.en`; (3) otherwise use the main field value.
+
+Example (field override):
+
+```json
+"title": "Timestamp converter",
+"description": "Convert between Unix timestamp and readable date.",
+"category": "Tools",
+"i18n": {
+  "zh_CN": {
+    "title": "时间戳转换",
+    "description": "在 Unix 时间戳与可读日期之间转换。",
+    "category": "工具"
+  }
+}
+```
+
+Example (template key):
+
+```json
+"title": "{{title}}",
+"description": "{{description}}",
+"category": "{{category}}",
+"i18n": {
+  "en": { "title": "Timestamp converter", "description": "...", "category": "Tools" },
+  "zh_CN": { "title": "时间戳转换", "description": "...", "category": "工具" }
+}
+```
 
 ### 3.2 `features` (optional)
 
@@ -328,3 +363,28 @@ If you do not use MCP, you can still add plugins to CodeExpander in two ways:
    - Enable **plugin mode** in the snippet options.
 
 Once imported, the plugin appears in search and in the plugin list immediately.
+
+---
+
+## 9. NPM package: `package.json` description format
+
+If you **publish your plugin as an npm package**, the registry only exposes a single **description** field (from `package.json`). The host has no separate “display title” from the registry. To show a friendly **title** (instead of the package name) and a localized **description** in CodeExpander’s plugin list and detail view, use this convention in `package.json`’s **description**:
+
+**Format:** `Display title - Short description (e.g. CodeExpander plugin for …). | 中文标题 - 中文描述。`
+
+- Use **`|`** (or ` | `) to separate the **English** and **Chinese** segments. The host detects which segment is which by the presence of CJK characters and then picks the segment that matches the user’s language.
+- Within each segment, use **` - `** (space, hyphen, space) to separate:
+  - **Title** — shown in the plugin list instead of the package name (e.g. `@codeexpander/plugin-xyz`).
+  - **Description** — short body text shown under the title.
+- If there is no ` - ` in the chosen segment, the whole segment is used as the description and the package short name is used as the title.
+
+**Example** (in `package.json`):
+
+```json
+"description": "My Tool - A CodeExpander plugin for X.|我的工具 - 用于 X 的 CodeExpander 插件。"
+```
+
+- For an **English** locale, the host shows title “My Tool” and description “A CodeExpander plugin for X.”
+- For a **Chinese** locale, the host shows title “我的工具” and description “用于 X 的 CodeExpander 插件。”
+
+**Note:** If the plugin is installed and has a **plugin.json** with an **i18n** field (see §3.1.2), the host may use that for title/description instead when available.

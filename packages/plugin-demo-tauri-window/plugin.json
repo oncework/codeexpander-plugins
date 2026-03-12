@@ -1,11 +1,11 @@
 {
   "main": "dist/index.html",
-  "title": "Demo: Tauri 窗口 API",
-  "description": "CodeExpander 插件 demo：展示 @tauri-apps/api 窗口 API 完整功能。需「以插件窗口打开」才能使用。",
+  "title": "Demo: Tauri Window API",
+  "description": "CodeExpander plugin demo: showcases full @tauri-apps/api window API. Use \"Open as plugin window\" to try.",
   "category": "demo",
   "order": 90,
   "features": [
-    { "code": "tauri_window", "explain": "Tauri 窗口 API 演示：尺寸、位置、置顶、标题等", "cmds": ["tauri", "window", "窗口"] }
+    { "code": "tauri_window", "explain": "Tauri window API demo: size, position, always-on-top, title, etc.", "cmds": ["tauri", "window", "窗口"] }
   ],
   "pluginSetting": {
     "height": 560,
@@ -33,5 +33,12 @@
       "core:window:allow-close",
       "core:window:allow-request-user-attention"
     ]
+  },
+  "i18n": {
+    "zh_CN": {
+      "title": "Demo：Tauri 窗口 API",
+      "description": "CodeExpander 插件 demo：展示 @tauri-apps/api 窗口 API 完整功能。需「以插件窗口打开」才能使用。",
+      "category": "演示"
+    }
   }
 }

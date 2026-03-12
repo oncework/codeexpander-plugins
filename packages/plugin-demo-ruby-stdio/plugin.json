@@ -1,16 +1,23 @@
 {
   "main": "index.html",
   "title": "Demo: Stdio Backend (Ruby)",
-  "description": "CodeExpander 插件 demo [Ruby]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。",
+  "description": "CodeExpander plugin demo [Ruby]: backend stdio mode. Each call spawns a new process, communicates via stdin/stdout.",
   "category": "demo-ruby",
   "order": 120,
   "features": [
-    { "code": "text_transform", "explain": "文本转换演示 Ruby stdio 后端", "cmds": ["demo stdio", "ruby stdio"] }
+    { "code": "text_transform", "explain": "Text transform demo for Ruby stdio backend", "cmds": ["demo stdio", "ruby stdio"] }
   ],
   "pluginSetting": { "height": 400, "width": 500 },
   "backend": {
     "runtime": "ruby",
     "entry": "backend.rb",
     "mode": "stdio"
+  },
+  "i18n": {
+    "zh_CN": {
+      "title": "Demo：Stdio 后端 (Ruby)",
+      "description": "CodeExpander 插件 demo [Ruby]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。",
+      "category": "演示"
+    }
   }
 }

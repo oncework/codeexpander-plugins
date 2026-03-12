@@ -1,7 +1,7 @@
 {
   "main": "dist/index.html",
   "title": "Encoding / Decoding",
-  "description": "Encode/decode: URL, Base64, JWT decoder. EN | 编码解码：URL、Base64、JWT解析。",
+  "description": "Encode/decode: URL, Base64, JWT decoder.",
   "category": "encoding",
   "order": 2,
   "features": [
@@ -9,5 +9,12 @@
     { "code": "base64", "explain": "Base64 encode and decode", "cmds": ["base64"] },
     { "code": "jwt_decoder", "explain": "Decode and inspect JWT", "cmds": ["jwt", "token"] }
   ],
-  "pluginSetting": { "height": 800, "width": 1200 }
+  "pluginSetting": { "height": 800, "width": 1200 },
+  "i18n": {
+    "zh_CN": {
+      "title": "编码解码",
+      "description": "编码解码：URL、Base64、JWT解析。",
+      "category": "编码"
+    }
+  }
 }

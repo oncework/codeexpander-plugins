@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-ai",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "type": "module",
   "main": "dist/index.html",
@@ -12,7 +12,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "CodeExpander plugin: tokenizer for LLMs (count tokens). 大模型分词器。",
+  "description": "AI Tools - Tokenizer for LLMs (count tokens). | AI 工具 - 大模型分词器。",
   "keywords": [
     "codeexpander",
     "plugin",

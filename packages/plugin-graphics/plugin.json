@@ -1,1 +1,19 @@
-{"main":"dist/index.html","title":"Graphics","description": "Graphics: QR code, WiFi QR, color palette, HTML colors, camera, painting, image converter. EN | 图形：二维码、配色、颜色参考、摄像头、画板、图片转换。","category":"graphics","order":9,"features":[{"code":"qr","explain":"QR code generator","cmds":["qr"]},{"code":"color","explain":"Color tools","cmds":["color"]}],"pluginSetting":{"height":800,"width":1200}}
+{
+  "main": "dist/index.html",
+  "title": "Graphics",
+  "description": "Graphics: QR code, WiFi QR, color palette, HTML colors, camera, painting, image converter.",
+  "category": "graphics",
+  "order": 9,
+  "features": [
+    { "code": "qr", "explain": "QR code generator", "cmds": ["qr"] },
+    { "code": "color", "explain": "Color tools", "cmds": ["color"] }
+  ],
+  "pluginSetting": { "height": 800, "width": 1200 },
+  "i18n": {
+    "zh_CN": {
+      "title": "图形",
+      "description": "图形：二维码、配色、颜色参考、摄像头、画板、图片转换。",
+      "category": "图形"
+    }
+  }
+}

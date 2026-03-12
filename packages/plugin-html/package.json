@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-html",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "type": "module",
   "main": "dist/index.html",
@@ -12,7 +12,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "CodeExpander plugin: HTML tools (minifier, beautifier, to Markdown/JSX, preview, entity encoder, WYSIWYG). HTML工具：压缩、格式化、转Markdown/JSX、预览、实体编码、所见即所得。",
+  "description": "HTML Tools - Minifier, beautifier, to Markdown/JSX, preview, entity encoder, WYSIWYG. | HTML 工具 - 压缩、格式化、转Markdown/JSX、预览、实体编码、所见即所得。",
   "keywords": [
     "codeexpander",
     "plugin",

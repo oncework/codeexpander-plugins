@@ -1,16 +1,23 @@
 {
   "main": "index.html",
   "title": "Demo: HTTP Backend (Python)",
-  "description": "CodeExpander 插件 demo [Python]：后端 http 模式。常驻进程，通过 HTTP POST 通信，可复用连接。",
+  "description": "CodeExpander plugin demo [Python]: backend http mode. Long-lived process, communicates via HTTP POST, connection reused.",
   "category": "demo-python",
   "order": 111,
   "features": [
-    { "code": "text_transform", "explain": "文本转换演示 Python http 后端", "cmds": ["demo http", "python http"] }
+    { "code": "text_transform", "explain": "Text transform demo for Python http backend", "cmds": ["demo http", "python http"] }
   ],
   "pluginSetting": { "height": 400, "width": 500 },
   "backend": {
     "runtime": "python3",
     "entry": "backend.py",
     "mode": "http"
+  },
+  "i18n": {
+    "zh_CN": {
+      "title": "Demo：HTTP 后端 (Python)",
+      "description": "CodeExpander 插件 demo [Python]：后端 http 模式。常驻进程，通过 HTTP POST 通信，可复用连接。",
+      "category": "演示"
+    }
   }
 }

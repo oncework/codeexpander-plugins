@@ -1,12 +1,19 @@
 {
   "main": "dist/index.html",
   "title": "Currency",
-  "description": "Exchange rate lookup and currency converter. 汇率查询与货币转换。",
+  "description": "Exchange rate lookup and currency converter.",
   "category": "convertors",
   "order": 6,
   "features": [
     { "code": "currency", "explain": "Exchange rate lookup", "cmds": ["currency", "exchange", "汇率"] },
     { "code": "convert", "explain": "Currency converter", "cmds": ["convert", "转换"] }
   ],
-  "pluginSetting": { "height": 800, "width": 1200 }
+  "pluginSetting": { "height": 800, "width": 1200 },
+  "i18n": {
+    "zh_CN": {
+      "title": "货币",
+      "description": "汇率查询与货币转换。",
+      "category": "转换器"
+    }
+  }
 }

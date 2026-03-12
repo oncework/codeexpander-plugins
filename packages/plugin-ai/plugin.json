@@ -1,1 +1,18 @@
-{"main":"dist/index.html","title":"AI Tools","description": "Tokenizer for LLMs: count tokens. EN | 大模型分词器。","category":"ai","order":11,"features":[{"code":"tokenizer","explain":"Count tokens for LLM","cmds":["token","tokenizer"]}],"pluginSetting":{"height":800,"width":1200}}
+{
+  "main": "dist/index.html",
+  "title": "AI Tools",
+  "description": "Tokenizer for LLMs: count tokens.",
+  "category": "ai",
+  "order": 11,
+  "features": [
+    { "code": "tokenizer", "explain": "Count tokens for LLM", "cmds": ["token", "tokenizer"] }
+  ],
+  "pluginSetting": { "height": 800, "width": 1200 },
+  "i18n": {
+    "zh_CN": {
+      "title": "AI 工具",
+      "description": "大模型分词器。",
+      "category": "AI"
+    }
+  }
+}

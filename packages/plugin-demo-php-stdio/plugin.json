@@ -1,16 +1,23 @@
 {
   "main": "index.html",
   "title": "Demo: Stdio Backend (PHP)",
-  "description": "CodeExpander 插件 demo [PHP]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。",
+  "description": "CodeExpander plugin demo [PHP]: backend stdio mode. Each call spawns a new process, communicates via stdin/stdout.",
   "category": "demo-php",
   "order": 130,
   "features": [
-    { "code": "text_transform", "explain": "文本转换演示 PHP stdio 后端", "cmds": ["demo stdio", "php stdio"] }
+    { "code": "text_transform", "explain": "Text transform demo for PHP stdio backend", "cmds": ["demo stdio", "php stdio"] }
   ],
   "pluginSetting": { "height": 400, "width": 500 },
   "backend": {
     "runtime": "php",
     "entry": "backend.php",
     "mode": "stdio"
+  },
+  "i18n": {
+    "zh_CN": {
+      "title": "Demo：Stdio 后端 (PHP)",
+      "description": "CodeExpander 插件 demo [PHP]：后端 stdio 模式。每次调用 spawn 新进程，通过 stdin/stdout 通信。",
+      "category": "演示"
+    }
   }
 }

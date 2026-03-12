@@ -1,8 +1,8 @@
 {
   "name": "@codeexpander/plugin-demo-nodejs-http",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
-  "description": "CodeExpander plugin demo: Node.js backend http mode",
+  "description": "Demo: HTTP Backend (Node.js) - Long-lived backend, HTTP POST. | Demo：HTTP 后端 (Node.js) - 常驻进程，HTTP POST。",
   "scripts": {
     "build": "echo 'No build needed - plain HTML/JS'"
   }
