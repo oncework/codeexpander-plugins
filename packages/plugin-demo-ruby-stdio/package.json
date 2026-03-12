@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-demo-ruby-stdio",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "CodeExpander plugin demo: Ruby backend stdio mode",
   "scripts": {

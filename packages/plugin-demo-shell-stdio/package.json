@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-demo-shell-stdio",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "CodeExpander plugin demo: Shell backend stdio mode",
   "scripts": {
