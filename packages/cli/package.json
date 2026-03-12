@@ -1,0 +1,50 @@
+{
+  "name": "create-codeexpander-plugin",
+  "version": "0.1.0",
+  "description": "Scaffold CodeExpander plugins with React, Node.js, Python, or Go. 一键初始化 CodeExpander 插件。",
+  "type": "module",
+  "bin": {
+    "create-codeexpander-plugin": "./dist/index.cjs"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "kolorist": "^1.8.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "cli",
+    "scaffold",
+    "create",
+    "codeexpander-plugin"
+  ],
+  "license": "MIT",
+  "author": "CodeExpander",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oncework/codeexpander-plugins.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/oncework/codeexpander-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/oncework/codeexpander-plugins/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

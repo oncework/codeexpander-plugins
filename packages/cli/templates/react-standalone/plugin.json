@@ -1,0 +1,11 @@
+{
+  "main": "dist/index.html",
+  "title": "{{title}}",
+  "description": "CodeExpander plugin: {{title}}",
+  "category": "tools",
+  "order": 100,
+  "features": [
+    { "code": "{{project-name-kebab}}", "explain": "{{title}}", "cmds": ["{{project-name-kebab}}"] }
+  ],
+  "pluginSetting": { "height": 600, "width": 800 }
+}

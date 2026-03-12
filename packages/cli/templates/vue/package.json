@@ -1,0 +1,27 @@
+{
+  "name": "{{package-name}}",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.html",
+  "files": ["dist", "plugin.json", "README.md"],
+  "description": "CodeExpander plugin: {{title}} (Vue 3)",
+  "keywords": ["codeexpander", "plugin", "vue"],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp plugin.json dist/ && node -e \"const fs=require('fs');const p=require('./dist/plugin.json');p.main='index.html';fs.writeFileSync('dist/plugin.json',JSON.stringify(p,null,2));\"",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vue-tsc": "^2.0.6"
+  }
+}

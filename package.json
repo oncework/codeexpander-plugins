@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm --filter @codeexpander/plugin-text run dev",
+    "create": "node packages/cli/dist/index.cjs",
     "build": "pnpm run build:plugins",
     "build:plugins": "pnpm --filter './packages/plugin-*' run build",
     "publish:plugins": "pnpm run build:plugins && pnpm --filter './packages/plugin-*' publish -r --no-git-checks",

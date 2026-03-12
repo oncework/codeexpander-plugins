@@ -1,0 +1,16 @@
+{
+  "main": "index.html",
+  "title": "{{title}}",
+  "description": "CodeExpander plugin: {{title}} (Node.js stdio backend)",
+  "category": "tools",
+  "order": 100,
+  "features": [
+    { "code": "{{project-name-kebab}}", "explain": "{{title}}", "cmds": ["{{project-name-kebab}}"] }
+  ],
+  "pluginSetting": { "height": 400, "width": 500 },
+  "backend": {
+    "runtime": "node",
+    "entry": "backend.js",
+    "mode": "stdio"
+  }
+}

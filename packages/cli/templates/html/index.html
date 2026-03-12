@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; padding: 16px; margin: 0; }
+    h2 { margin-top: 0; color: #333; }
+    .card { padding: 16px; background: #f8fafc; border-radius: 8px; margin-top: 12px; }
+    button { padding: 8px 16px; cursor: pointer; background: #2563eb; color: white; border: none; border-radius: 6px; margin-right: 8px; }
+    button:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <h2>{{title}}</h2>
+  <p>纯 HTML 插件，无需构建，在 CodeExpander 中导入此目录即可使用。</p>
+  <div class="card">
+    <button id="copy">复制到剪贴板</button>
+    <button id="toast">显示 Toast</button>
+  </div>
+
+  <script>
+    document.getElementById("copy").onclick = () => {
+      const bridge = window.__codeexpander;
+      if (bridge?.writeClipboard) {
+        bridge.writeClipboard("Hello from {{title}}!");
+      } else {
+        alert("请在 CodeExpander 中运行此插件");
+      }
+    };
+    document.getElementById("toast").onclick = () => {
+      const bridge = window.__codeexpander;
+      if (bridge?.showToast) {
+        bridge.showToast("Hello from {{title}}!");
+      } else {
+        alert("请在 CodeExpander 中运行此插件");
+      }
+    };
+  </script>
+</body>
+</html>
