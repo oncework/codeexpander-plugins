@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-demo-python-http",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "description": "Demo: HTTP Backend (Python) - Long-lived backend, HTTP POST. | Demo：HTTP 后端 (Python) - 常驻进程，HTTP POST。",
   "scripts": {
