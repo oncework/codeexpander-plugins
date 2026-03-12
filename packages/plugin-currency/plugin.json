@@ -1,19 +1,25 @@
 {
   "main": "dist/index.html",
-  "title": "Currency",
+  "title": "Currency & Exchange Rates",
   "description": "Exchange rate lookup and currency converter.",
   "category": "convertors",
   "order": 6,
   "features": [
-    { "code": "currency", "explain": "Exchange rate lookup", "cmds": ["currency", "exchange", "汇率"] },
-    { "code": "convert", "explain": "Currency converter", "cmds": ["convert", "转换"] }
+    { "code": "currency", "explain": "{{feature.currency.explain}}", "cmds": ["currency", "exchange", "汇率"] },
+    { "code": "convert", "explain": "{{feature.convert.explain}}", "cmds": ["convert", "转换"] }
   ],
   "pluginSetting": { "height": 800, "width": 1200 },
   "i18n": {
+    "en": {
+      "feature.currency.explain": "Look up live exchange rates for currencies.",
+      "feature.convert.explain": "Convert amounts between different currencies."
+    },
     "zh_CN": {
-      "title": "货币",
+      "title": "汇率与货币转换",
       "description": "汇率查询与货币转换。",
-      "category": "转换器"
+      "category": "转换器",
+      "feature.currency.explain": "查询各类货币的实时汇率。",
+      "feature.convert.explain": "在不同货币之间转换金额。"
     }
   }
 }

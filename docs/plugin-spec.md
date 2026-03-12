@@ -91,12 +91,12 @@ When the plugin runs in the **standalone plugin window** (“open as plugin wind
 
 ### 3.1.2 `i18n` (optional)
 
-Multi-language strings for **title**, **description**, and **category**. The host resolves display text by locale (e.g. `zh_CN`, `en`).
+Multi-language strings for **title**, **description**, and **category**, and optionally any other keys you want to look up (for example feature explanations). The host resolves display text by locale (e.g. `zh_CN`, `en`).
 
-- **Structure**: `i18n` is an object whose keys are locale codes (`en`, `zh_CN`, etc.) and values are objects mapping field names or keys to strings (e.g. `title`, `description`, `category`).
-- **Resolution order** for each field: (1) `i18n[locale].field` or `i18n.en.field` if present; (2) if the main field value looks like `{{key}}`, look up that key in `i18n[locale]` or `i18n.en`; (3) otherwise use the main field value.
+- **Structure**: `i18n` is an object whose keys are locale codes (`en`, `zh_CN`, etc.) and values are objects mapping field names or keys to strings. Common keys are `title`, `description`, `category`, but you can also define custom keys such as `"feature.timestamp_convert.explain"`.
+- **Resolution order** for each core field (**title / description / category**): (1) `i18n[locale].field` or `i18n.en.field` if present; (2) if the main field value looks like `{{key}}`, look up that key in `i18n[locale]` or `i18n.en`; (3) otherwise use the main field value.
 
-Example (field override):
+Example (field override for core fields):
 
 ```json
 "title": "Timestamp converter",
@@ -123,17 +123,41 @@ Example (template key):
 }
 ```
 
+You can also use **custom keys for feature explanations**, which are resolved by the host when rendering the feature list:
+
+```json
+"features": [
+  {
+    "code": "timestamp_convert",
+    "explain": "{{feature.timestamp_convert.explain}}",
+    "cmds": ["timestamp", "ts"]
+  }
+],
+"i18n": {
+  "en": {
+    "feature.timestamp_convert.explain": "Convert between Unix timestamp and readable dates."
+  },
+  "zh_CN": {
+    "feature.timestamp_convert.explain": "在 Unix 时间戳与可读日期之间转换。"
+  }
+}
+```
+
+If `explain` is a plain string (not a `{{key}}` template), the host first tries to read a more specific key like `"feature.<code>.explain"` from `i18n[locale]` / `i18n.en`, and falls back to the original `explain` text if no localized value is found.
+
 ### 3.2 `features` (optional)
 
 Each feature item can have:
 
 1. **code** — short identifier (e.g. `"timestamp_convert"`).  
-2. **explain** — one‑line explanation in natural language.  
+2. **explain** — one‑line explanation in natural language. This can either be:
+   - A **plain string** in your default language, e.g. `"Convert between Unix timestamps and readable dates."`, or
+   - A **template key** like `{{feature.timestamp_convert.explain}}` that is looked up in `i18n[locale]` / `i18n.en` (see §3.1.2).
 3. **cmds** — array of **command triggers**:
    - Simple string trigger, or
    - Object with `type` (one of `regex`, `over`, `files`, `img`, `window`, etc.) and type‑specific fields.
 
-Use `features` to describe when this plugin is relevant so **search** and **AI tools** can route queries to it.
+Use `features` to describe when this plugin is relevant so **search** and **AI tools** can route queries to it. When `i18n` is present, the host will automatically pick a localized `explain` text for each feature when rendering plugin details.
 
 ### 3.3 `backend` object
 
@@ -388,3 +412,26 @@ If you **publish your plugin as an npm package**, the registry only exposes a si
 - For a **Chinese** locale, the host shows title “我的工具” and description “用于 X 的 CodeExpander 插件。”
 
 **Note:** If the plugin is installed and has a **plugin.json** with an **i18n** field (see §3.1.2), the host may use that for title/description instead when available.
+
+---
+
+## 10. NPM README: multi-language layout (optional but recommended)
+
+When a plugin is installed from npm, CodeExpander also shows the package **README** in the detail view. To keep the README readable in multiple languages inside a small desktop window, you can optionally split the README into language blocks using a **single separator line**:
+
+```md
+Your English title
+Your English content...
+
+----------
+
+你的中文标题
+你的中文内容……
+```
+
+- Use a line containing only **6 or more `-` or `=` characters** (for example `------` or `==========`) as the separator.
+- Content **above** the first separator is treated as one language block; content **below** is treated as another.
+- The host detects which block is Chinese or English by checking for CJK characters and then picks the block that matches the current UI language (e.g. `zh_*` prefers the Chinese block).
+- If there is no separator, or the host cannot confidently decide, the entire README is rendered as‑is (backwards compatible).
+
+This convention is optional but recommended for plugins that target both English and Chinese audiences, and keeps the plugin detail view focused and readable.

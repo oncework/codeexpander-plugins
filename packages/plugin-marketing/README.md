@@ -1,11 +1,21 @@
-# Marketing / 营销
+# Marketing
 
-**EN** — Website rank tracker: check domain ranking and view stats and trend chart. Single-tool plugin.
+Website rank tracker: check domain ranking and view stats and trend chart. Single-tool plugin.
 
-**中文** — 网站排名追踪：查询域名排名、查看统计与趋势图。单工具插件。
+## Tools
 
-## Tools / 工具列表
+| id | EN |
+|----|----|
+| website-rank-tracker | Website Rank Tracker |
 
-| id | EN | 中文 |
-|----|-----|------|
-| website-rank-tracker | Website Rank Tracker | 网站排名追踪 |
+----------
+
+# 营销
+
+网站排名追踪：查询域名排名、查看统计与趋势图。单工具插件。
+
+## 工具列表
+
+| id | 中文 |
+|----|------|
+| website-rank-tracker | 网站排名追踪 |

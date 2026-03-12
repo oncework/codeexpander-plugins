@@ -1,16 +1,31 @@
-# Generators / 生成器
+# Generators
 
-**EN** — Random data generators: UUID, Lorem ipsum, fake data (name, address, etc.), random phone, random email (with options), ISO format generator. Switch between tools via tabs.
+Random data generators: UUID, Lorem ipsum, fake data (name, address, etc.), random phone, random email (with options), ISO format generator. Switch between tools via tabs.
 
-**中文** — 随机数据生成：UUID、Lorem 占位文本、假数据（姓名地址等）、随机手机号、随机邮箱（可配置）、ISO 格式生成。通过标签页切换不同工具。
+## Tools
 
-## Tools / 工具列表
+| id | EN |
+|----|----|
+| uuid-generator | UUID Generator |
+| lorem-generator | Lorem Generator |
+| fake-data-generator | Fake Data Generator |
+| random-phone-generator | Random Phone Generator |
+| random-email-generator | Random Email Generator |
+| iso-generator | ISO Generator |
 
-| id | EN | 中文 |
-|----|-----|------|
-| uuid-generator | UUID Generator | UUID 生成 |
-| lorem-generator | Lorem Generator | Lorem 生成 |
-| fake-data-generator | Fake Data Generator | 假数据生成 |
-| random-phone-generator | Random Phone Generator | 随机手机号 |
-| random-email-generator | Random Email Generator | 随机邮箱 |
-| iso-generator | ISO Generator | ISO 生成 |
+----------
+
+# 生成器
+
+随机数据生成：UUID、Lorem 占位文本、假数据（姓名地址等）、随机手机号、随机邮箱（可配置）、ISO 格式生成。通过标签页切换不同工具。
+
+## 工具列表
+
+| id | 中文 |
+|----|------|
+| uuid-generator | UUID 生成 |
+| lorem-generator | Lorem 生成 |
+| fake-data-generator | 假数据生成 |
+| random-phone-generator | 随机手机号 |
+| random-email-generator | 随机邮箱 |
+| iso-generator | ISO 生成 |

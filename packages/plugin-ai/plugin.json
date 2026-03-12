@@ -1,18 +1,22 @@
 {
   "main": "dist/index.html",
-  "title": "AI Tools",
+  "title": "LLM Tokenizer",
   "description": "Tokenizer for LLMs: count tokens.",
   "category": "ai",
   "order": 11,
   "features": [
-    { "code": "tokenizer", "explain": "Count tokens for LLM", "cmds": ["token", "tokenizer"] }
+    { "code": "tokenizer", "explain": "{{feature.tokenizer.explain}}", "cmds": ["token", "tokenizer"] }
   ],
   "pluginSetting": { "height": 800, "width": 1200 },
   "i18n": {
+    "en": {
+      "feature.tokenizer.explain": "Count tokens for LLM prompts and responses."
+    },
     "zh_CN": {
-      "title": "AI 工具",
-      "description": "大模型分词器。",
-      "category": "AI"
+      "title": "大模型分词器",
+      "description": "统计大模型提示词与回复的 token 数量。",
+      "category": "AI",
+      "feature.tokenizer.explain": "统计大模型提示词与回复的 token 数量。"
     }
   }
 }

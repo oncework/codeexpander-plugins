@@ -1,19 +1,25 @@
 {
   "main": "dist/index.html",
-  "title": "Security",
-  "description": "Security: hash generator, htpasswd, strong password, credential detector.",
+  "title": "Security Tools",
+  "description": "Security tools: hash generator, htpasswd, strong password, credential detector.",
   "category": "security",
   "order": 7,
   "features": [
-    { "code": "hash", "explain": "Generate hashes", "cmds": ["hash", "md5", "sha"] },
-    { "code": "password", "explain": "Password generator", "cmds": ["password"] }
+    { "code": "hash", "explain": "{{feature.hash.explain}}", "cmds": ["hash", "md5", "sha"] },
+    { "code": "password", "explain": "{{feature.password.explain}}", "cmds": ["password"] }
   ],
   "pluginSetting": { "height": 800, "width": 1200 },
   "i18n": {
+    "en": {
+      "feature.hash.explain": "Generate hashes such as MD5 and SHA-1/256/384/512.",
+      "feature.password.explain": "Generate strong random passwords with configurable options."
+    },
     "zh_CN": {
-      "title": "安全",
-      "description": "安全：哈希、htpasswd、强密码、凭证检测。",
-      "category": "安全"
+      "title": "安全工具",
+      "description": "安全工具：哈希、htpasswd、强密码、凭证检测。",
+      "category": "安全",
+      "feature.hash.explain": "生成 MD5、SHA-1/256/384/512 等哈希值。",
+      "feature.password.explain": "生成可配置的强随机密码。"
     }
   }
 }

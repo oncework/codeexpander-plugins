@@ -1,20 +1,28 @@
 {
   "main": "dist/index.html",
-  "title": "Data & Format",
-  "description": "Data format: JSON/XML formatter and validator, YAML converter.",
+  "title": "Data Format Tools",
+  "description": "Data format tools: JSON/XML formatter and validator, YAML converter.",
   "category": "data",
   "order": 6,
   "features": [
-    { "code": "json_formatter", "explain": "Format and validate JSON", "cmds": ["json"] },
-    { "code": "xml_formatter", "explain": "Format XML", "cmds": ["xml"] },
-    { "code": "yaml", "explain": "YAML converter", "cmds": ["yaml"] }
+    { "code": "json_formatter", "explain": "{{feature.json_formatter.explain}}", "cmds": ["json"] },
+    { "code": "xml_formatter", "explain": "{{feature.xml_formatter.explain}}", "cmds": ["xml"] },
+    { "code": "yaml", "explain": "{{feature.yaml.explain}}", "cmds": ["yaml"] }
   ],
   "pluginSetting": { "height": 800, "width": 1200 },
   "i18n": {
+    "en": {
+      "feature.json_formatter.explain": "Format and validate JSON with tree view output.",
+      "feature.xml_formatter.explain": "Format and validate XML with tree view output.",
+      "feature.yaml.explain": "Convert between YAML and JSON with options."
+    },
     "zh_CN": {
-      "title": "数据格式",
-      "description": "数据格式：JSON/XML/YAML 格式化与转换。",
-      "category": "数据"
+      "title": "数据格式工具",
+      "description": "数据格式工具：JSON/XML 格式化与校验、YAML 与 JSON 互转。",
+      "category": "数据",
+      "feature.json_formatter.explain": "格式化并校验 JSON，支持树形视图展示。",
+      "feature.xml_formatter.explain": "格式化并校验 XML，支持树形视图展示。",
+      "feature.yaml.explain": "在 YAML 与 JSON 之间进行可配置的互转。"
     }
   }
 }

@@ -1,19 +1,25 @@
 {
   "main": "dist/index.html",
-  "title": "Graphics",
-  "description": "Graphics: QR code, WiFi QR, color palette, HTML colors, camera, painting, image converter.",
+  "title": "Graphics & Image Tools",
+  "description": "Graphics & image tools: QR code, WiFi QR, color palette, HTML colors, camera, painting, image converter.",
   "category": "graphics",
   "order": 9,
   "features": [
-    { "code": "qr", "explain": "QR code generator", "cmds": ["qr"] },
-    { "code": "color", "explain": "Color tools", "cmds": ["color"] }
+    { "code": "qr", "explain": "{{feature.qr.explain}}", "cmds": ["qr"] },
+    { "code": "color", "explain": "{{feature.color.explain}}", "cmds": ["color"] }
   ],
   "pluginSetting": { "height": 800, "width": 1200 },
   "i18n": {
+    "en": {
+      "feature.qr.explain": "Generate QR codes, including WiFi QR codes.",
+      "feature.color.explain": "Work with color palettes and HTML color references."
+    },
     "zh_CN": {
-      "title": "图形",
-      "description": "图形：二维码、配色、颜色参考、摄像头、画板、图片转换。",
-      "category": "图形"
+      "title": "图形与图片工具",
+      "description": "图形与图片工具：二维码、配色、颜色参考、摄像头、画板、图片转换。",
+      "category": "图形",
+      "feature.qr.explain": "生成二维码，包括 WiFi 二维码。",
+      "feature.color.explain": "处理配色方案和 HTML 颜色参考。"
     }
   }
 }

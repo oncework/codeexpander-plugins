@@ -1,20 +1,28 @@
 {
   "main": "dist/index.html",
-  "title": "HTML Tools",
+  "title": "HTML Tools Suite",
   "description": "HTML tools: minifier, beautifier, to Markdown/JSX/plain text, preview, entity encoder, WYSIWYG editor.",
   "category": "html",
   "order": 3,
   "features": [
-    { "code": "html_minifier", "explain": "Minify HTML", "cmds": ["html minify"] },
-    { "code": "html_beautifier", "explain": "Beautify HTML", "cmds": ["html format"] },
-    { "code": "html_to_markdown", "explain": "Convert HTML to Markdown", "cmds": ["html markdown"] }
+    { "code": "html_minifier", "explain": "{{feature.html_minifier.explain}}", "cmds": ["html minify"] },
+    { "code": "html_beautifier", "explain": "{{feature.html_beautifier.explain}}", "cmds": ["html format"] },
+    { "code": "html_to_markdown", "explain": "{{feature.html_to_markdown.explain}}", "cmds": ["html markdown"] }
   ],
   "pluginSetting": { "height": 800, "width": 1200 },
   "i18n": {
+    "en": {
+      "feature.html_minifier.explain": "Minify HTML to reduce size.",
+      "feature.html_beautifier.explain": "Beautify and format HTML for readability.",
+      "feature.html_to_markdown.explain": "Convert HTML content into Markdown."
+    },
     "zh_CN": {
-      "title": "HTML 工具",
-      "description": "HTML工具：压缩、格式化、转Markdown/JSX、预览、实体编码、所见即所得。",
-      "category": "HTML"
+      "title": "HTML 工具集",
+      "description": "HTML 工具集：压缩、格式化、转 Markdown/JSX、预览、实体编码、所见即所得。",
+      "category": "HTML",
+      "feature.html_minifier.explain": "压缩 HTML 以减小体积。",
+      "feature.html_beautifier.explain": "格式化 HTML 代码以提升可读性。",
+      "feature.html_to_markdown.explain": "将 HTML 内容转换为 Markdown。"
     }
   }
 }

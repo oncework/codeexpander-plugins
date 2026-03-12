@@ -1,20 +1,28 @@
 {
   "main": "dist/index.html",
-  "title": "Encoding / Decoding",
-  "description": "Encode/decode: URL, Base64, JWT decoder.",
+  "title": "Encoding & Decoding Tools",
+  "description": "Encoding/decoding tools: URL, Base64, JWT decoder.",
   "category": "encoding",
   "order": 2,
   "features": [
-    { "code": "url_encoder", "explain": "Encode and decode URLs", "cmds": ["url encode", "decode"] },
-    { "code": "base64", "explain": "Base64 encode and decode", "cmds": ["base64"] },
-    { "code": "jwt_decoder", "explain": "Decode and inspect JWT", "cmds": ["jwt", "token"] }
+    { "code": "url_encoder", "explain": "{{feature.url_encoder.explain}}", "cmds": ["url encode", "decode"] },
+    { "code": "base64", "explain": "{{feature.base64.explain}}", "cmds": ["base64"] },
+    { "code": "jwt_decoder", "explain": "{{feature.jwt_decoder.explain}}", "cmds": ["jwt", "token"] }
   ],
   "pluginSetting": { "height": 800, "width": 1200 },
   "i18n": {
+    "en": {
+      "feature.url_encoder.explain": "Encode and decode URLs using percent-encoding.",
+      "feature.base64.explain": "Encode and decode text or binary data as Base64.",
+      "feature.jwt_decoder.explain": "Decode and inspect JWT headers and payload."
+    },
     "zh_CN": {
-      "title": "编码解码",
-      "description": "编码解码：URL、Base64、JWT解析。",
-      "category": "编码"
+      "title": "编码解码工具",
+      "description": "编码解码工具：URL、Base64、JWT 解析。",
+      "category": "编码",
+      "feature.url_encoder.explain": "使用百分号编码对 URL 进行编码和解码。",
+      "feature.base64.explain": "将文本或二进制数据编码/解码为 Base64。",
+      "feature.jwt_decoder.explain": "解析 JWT 的 header 与 payload 内容。"
     }
   }
 }

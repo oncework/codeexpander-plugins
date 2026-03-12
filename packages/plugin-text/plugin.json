@@ -1,28 +1,52 @@
 {
   "main": "dist/index.html",
-  "title": "Text Tools",
-  "description": "Text utilities: word/character counter, text diff, case converter, regex tester, find & replace, prefix/suffix, line breaks, remove duplicate/empty/extra lines, em dash replacer.",
+  "title": "Text Utilities",
+  "description": "Text utilities: word/character counter, text diff, case converter, regex tester, find & replace, line tools.",
   "category": "text",
   "order": 1,
   "features": [
-    { "code": "word_counter", "explain": "Count words, characters, and lines in text", "cmds": ["word count", "character count"] },
-    { "code": "text_diff", "explain": "Compare two texts and highlight differences", "cmds": ["diff", "compare text"] },
-    { "code": "case_convert", "explain": "Convert text between uppercase, lowercase, camelCase", "cmds": ["case", "uppercase", "lowercase"] },
-    { "code": "regex_tester", "explain": "Test and debug regular expressions", "cmds": ["regex", "pattern"] },
-    { "code": "find_replace", "explain": "Find and replace text", "cmds": ["find replace", "search substitute"] },
-    { "code": "prefix_suffix", "explain": "Add prefix or suffix to each line", "cmds": ["prefix", "suffix", "lines"] },
-    { "code": "line_breaks", "explain": "Add or remove line breaks", "cmds": ["line break", "wrap"] },
-    { "code": "remove_duplicate_lines", "explain": "Remove duplicate lines", "cmds": ["dedupe lines"] },
-    { "code": "remove_empty_lines", "explain": "Remove empty lines", "cmds": ["empty lines"] },
-    { "code": "remove_extra_spaces", "explain": "Trim and normalize whitespace", "cmds": ["trim", "spaces"] },
-    { "code": "em_dash", "explain": "Replace em dashes with other punctuation", "cmds": ["em dash"] }
+    { "code": "word_counter", "explain": "{{feature.word_counter.explain}}", "cmds": ["word count", "character count"] },
+    { "code": "text_diff", "explain": "{{feature.text_diff.explain}}", "cmds": ["diff", "compare text"] },
+    { "code": "case_convert", "explain": "{{feature.case_convert.explain}}", "cmds": ["case", "uppercase", "lowercase"] },
+    { "code": "regex_tester", "explain": "{{feature.regex_tester.explain}}", "cmds": ["regex", "pattern"] },
+    { "code": "find_replace", "explain": "{{feature.find_replace.explain}}", "cmds": ["find replace", "search substitute"] },
+    { "code": "prefix_suffix", "explain": "{{feature.prefix_suffix.explain}}", "cmds": ["prefix", "suffix", "lines"] },
+    { "code": "line_breaks", "explain": "{{feature.line_breaks.explain}}", "cmds": ["line break", "wrap"] },
+    { "code": "remove_duplicate_lines", "explain": "{{feature.remove_duplicate_lines.explain}}", "cmds": ["dedupe lines"] },
+    { "code": "remove_empty_lines", "explain": "{{feature.remove_empty_lines.explain}}", "cmds": ["empty lines"] },
+    { "code": "remove_extra_spaces", "explain": "{{feature.remove_extra_spaces.explain}}", "cmds": ["trim", "spaces"] },
+    { "code": "em_dash", "explain": "{{feature.em_dash.explain}}", "cmds": ["em dash"] }
   ],
   "pluginSetting": { "height": 800, "width": 1200 },
   "i18n": {
+    "en": {
+      "feature.word_counter.explain": "Count words, characters, and lines in text.",
+      "feature.text_diff.explain": "Compare two texts and highlight the differences.",
+      "feature.case_convert.explain": "Convert text between uppercase, lowercase, and camelCase.",
+      "feature.regex_tester.explain": "Test and debug regular expressions against sample text.",
+      "feature.find_replace.explain": "Find and replace text with flexible options.",
+      "feature.prefix_suffix.explain": "Add a prefix or suffix to each line of text.",
+      "feature.line_breaks.explain": "Add, remove, or normalize line breaks.",
+      "feature.remove_duplicate_lines.explain": "Remove duplicate lines from the input.",
+      "feature.remove_empty_lines.explain": "Remove empty or whitespace-only lines.",
+      "feature.remove_extra_spaces.explain": "Trim and normalize extra spaces in text.",
+      "feature.em_dash.explain": "Replace em dashes with other punctuation styles."
+    },
     "zh_CN": {
-      "title": "文本工具",
-      "description": "文本工具：字数统计、文本对比、大小写转换、正则、查找替换等。",
-      "category": "文本"
+      "title": "文本工具集",
+      "description": "文本工具集：字数统计、文本对比、大小写转换、正则、查找替换、行处理等。",
+      "category": "文本",
+      "feature.word_counter.explain": "统计文本中的字数、字符数和行数。",
+      "feature.text_diff.explain": "对比两段文本并高亮差异。",
+      "feature.case_convert.explain": "在大写、小写、驼峰等大小写风格之间转换文本。",
+      "feature.regex_tester.explain": "针对示例文本测试和调试正则表达式。",
+      "feature.find_replace.explain": "以多种选项查找并替换文本。",
+      "feature.prefix_suffix.explain": "为每一行文本添加前缀或后缀。",
+      "feature.line_breaks.explain": "添加、移除或规范换行符。",
+      "feature.remove_duplicate_lines.explain": "移除输入中的重复行。",
+      "feature.remove_empty_lines.explain": "移除空行或仅包含空白的行。",
+      "feature.remove_extra_spaces.explain": "裁剪并规范文本中的多余空格。",
+      "feature.em_dash.explain": "将破折号替换为其他标点风格。"
     }
   }
 }

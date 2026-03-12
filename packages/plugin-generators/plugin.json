@@ -1,19 +1,25 @@
 {
   "main": "dist/index.html",
-  "title": "Generators",
-  "description": "Generators: UUID, Lorem, fake data, phone, email, ISO.",
+  "title": "Random Data Generators",
+  "description": "Random generators: UUID, Lorem, fake data, phone, email, ISO.",
   "category": "generators",
   "order": 8,
   "features": [
-    { "code": "uuid", "explain": "Generate UUIDs", "cmds": ["uuid"] },
-    { "code": "lorem", "explain": "Lorem ipsum", "cmds": ["lorem"] }
+    { "code": "uuid", "explain": "{{feature.uuid.explain}}", "cmds": ["uuid"] },
+    { "code": "lorem", "explain": "{{feature.lorem.explain}}", "cmds": ["lorem"] }
   ],
   "pluginSetting": { "height": 800, "width": 1200 },
   "i18n": {
+    "en": {
+      "feature.uuid.explain": "Generate random UUIDs (v4) for testing or IDs.",
+      "feature.lorem.explain": "Generate Lorem ipsum placeholder text."
+    },
     "zh_CN": {
-      "title": "生成器",
-      "description": "生成器：UUID、Lorem、假数据、手机号、邮箱、ISO。",
-      "category": "生成器"
+      "title": "随机数据生成器",
+      "description": "随机数据生成器：UUID、Lorem、假数据、手机号、邮箱、ISO。",
+      "category": "生成器",
+      "feature.uuid.explain": "生成随机 UUID（v4），用于测试或标识符。",
+      "feature.lorem.explain": "生成 Lorem 占位文本。"
     }
   }
 }
