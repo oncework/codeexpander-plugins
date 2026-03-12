@@ -1,0 +1,65 @@
+{
+  "currencies": {
+    "AUD": "澳元",
+    "BRL": "巴西雷亚尔",
+    "CAD": "加元",
+    "CHF": "瑞士法郎",
+    "CNY": "人民币",
+    "CZK": "捷克克朗",
+    "DKK": "丹麦克朗",
+    "EUR": "欧元",
+    "GBP": "英镑",
+    "HKD": "港币",
+    "HUF": "匈牙利福林",
+    "IDR": "印尼盾",
+    "ILS": "以色列新谢克尔",
+    "INR": "印度卢比",
+    "ISK": "冰岛克朗",
+    "JPY": "日元",
+    "KRW": "韩元",
+    "MXN": "墨西哥比索",
+    "MYR": "马来西亚林吉特",
+    "NOK": "挪威克朗",
+    "NZD": "新西兰元",
+    "PHP": "菲律宾比索",
+    "PLN": "波兰兹罗提",
+    "RON": "罗马尼亚列伊",
+    "SEK": "瑞典克朗",
+    "SGD": "新加坡元",
+    "THB": "泰铢",
+    "TRY": "土耳其里拉",
+    "USD": "美元",
+    "ZAR": "南非兰特"
+  },
+  "common": {
+    "copy": "复制",
+    "copied": "已复制！",
+    "error": "错误"
+  },
+  "tools": {
+    "rate-lookup": "汇率查询",
+    "currency-converter": "货币转换"
+  },
+  "rateLookup": {
+    "title": "汇率查询",
+    "description": "以基准货币 1 单位为准的实时汇率，数据来自 Frankfurter API。",
+    "baseCurrency": "基准货币",
+    "loading": "加载中...",
+    "error": "获取汇率失败",
+    "refresh": "刷新",
+    "currencyCode": "货币代码",
+    "rate": "汇率",
+    "perUnit": "1 {base} ="
+  },
+  "currencyConverter": {
+    "title": "货币转换",
+    "description": "使用实时汇率在货币之间转换。",
+    "from": "来源",
+    "to": "目标",
+    "swap": "互换来源与目标",
+    "amount": "金额",
+    "convert": "转换",
+    "result": "结果",
+    "errorInvalid": "请输入有效金额"
+  }
+}
