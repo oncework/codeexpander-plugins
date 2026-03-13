@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-demo-ruby-stdio",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "description": "Demo: Stdio Backend (Ruby) - Backend stdio mode, spawn per call. | Demo：Stdio 后端 (Ruby) - 后端 stdio 模式。",
   "scripts": {

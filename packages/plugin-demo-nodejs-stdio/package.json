@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-demo-nodejs-stdio",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "description": "Demo: Stdio Backend (Node.js) - Backend stdio mode, spawn per call. | Demo：Stdio 后端 (Node.js) - 后端 stdio 模式。",
   "scripts": {

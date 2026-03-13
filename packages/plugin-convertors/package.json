@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-convertors",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": false,
   "type": "module",
   "main": "dist/index.html",
@@ -12,7 +12,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "Convertors - Date-time, base, color, YAML/JSON/TOML/XML/Markdown, list, temperature. | 转换器 - 日期、进制、颜色、格式互转、列表、温度。",
+  "description": "Format Converters - Date-time, base, color, YAML/JSON/TOML/XML/Markdown, list, temperature. | 格式转换工具 - 日期、进制、颜色、格式互转、列表、温度。",
   "keywords": [
     "codeexpander",
     "plugin",

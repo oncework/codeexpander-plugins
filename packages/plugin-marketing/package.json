@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-marketing",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": false,
   "type": "module",
   "main": "dist/index.html",
@@ -12,7 +12,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "Marketing - Website rank tracker (domain ranking and stats). | 营销 - 网站排名追踪。",
+  "description": "Website Rank Tracker - Domain ranking, stats and trends. | 网站排名追踪 - 域名排名、统计与趋势。",
   "keywords": [
     "codeexpander",
     "plugin",

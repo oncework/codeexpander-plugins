@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-demo-ruby-http",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "description": "Demo: HTTP Backend (Ruby) - Long-lived backend, HTTP POST. | Demo：HTTP 后端 (Ruby) - 常驻进程，HTTP POST。",
   "scripts": {

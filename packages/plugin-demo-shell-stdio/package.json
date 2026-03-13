@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-demo-shell-stdio",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "description": "Demo: Stdio Backend (Shell) - Backend stdio mode, requires jq. | Demo：Stdio 后端 (Shell) - 后端 stdio 模式，依赖 jq。",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@codeexpander/plugin-demo-go-http",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "description": "Demo: HTTP Backend (Go) - Long-lived backend, HTTP POST. | Demo：HTTP 后端 (Go) - 常驻进程，HTTP POST。",
   "scripts": {
