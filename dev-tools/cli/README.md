@@ -64,7 +64,7 @@ pnpm create codeexpander-plugin my-plugin -t react-standalone --yes
 ## 发布到 npm
 
 ```bash
-cd packages/cli
+cd dev-tools/cli
 pnpm build
 npm publish
 ```

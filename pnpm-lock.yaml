@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  packages/cli:
+  dev-tools/cli:
     dependencies:
       commander:
         specifier: ^12.1.0
@@ -24,670 +24,11 @@ importers:
         specifier: ^0.24.0
         version: 0.24.2
 
-  packages/i18n: {}
+  dev-tools/i18n: {}
 
-  packages/plugin-ai:
-    dependencies:
-      lucide-react:
-        specifier: ^0.460.0
-        version: 0.460.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
+  dev-tools/plugin-types: {}
 
-  packages/plugin-convertors:
-    dependencies:
-      date-fns:
-        specifier: ^3.6.0
-        version: 3.6.0
-      lucide-react:
-        specifier: ^0.460.0
-        version: 0.460.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-currency:
-    dependencies:
-      lucide-react:
-        specifier: ^0.462.0
-        version: 0.462.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-data:
-    dependencies:
-      js-yaml:
-        specifier: ^4.1.0
-        version: 4.1.1
-      lucide-react:
-        specifier: ^0.462.0
-        version: 0.462.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-date:
-    dependencies:
-      date-fns:
-        specifier: ^3.6.0
-        version: 3.6.0
-      lucide-react:
-        specifier: ^0.462.0
-        version: 0.462.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-demo-go-http: {}
-
-  packages/plugin-demo-go-stdio: {}
-
-  packages/plugin-demo-nodejs-http: {}
-
-  packages/plugin-demo-nodejs-stdio: {}
-
-  packages/plugin-demo-php-http: {}
-
-  packages/plugin-demo-php-stdio: {}
-
-  packages/plugin-demo-python-http: {}
-
-  packages/plugin-demo-python-stdio: {}
-
-  packages/plugin-demo-ruby-http: {}
-
-  packages/plugin-demo-ruby-stdio: {}
-
-  packages/plugin-demo-shell-stdio: {}
-
-  packages/plugin-demo-tauri-window:
-    dependencies:
-      '@tauri-apps/api':
-        specifier: ^2.10.1
-        version: 2.10.1
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-encoding:
-    dependencies:
-      lucide-react:
-        specifier: ^0.462.0
-        version: 0.462.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-generators:
-    dependencies:
-      lucide-react:
-        specifier: ^0.462.0
-        version: 0.462.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-graphics:
-    dependencies:
-      lucide-react:
-        specifier: ^0.462.0
-        version: 0.462.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-html:
-    dependencies:
-      lucide-react:
-        specifier: ^0.462.0
-        version: 0.462.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-marketing:
-    dependencies:
-      lucide-react:
-        specifier: ^0.460.0
-        version: 0.460.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-      recharts:
-        specifier: ^2.15.0
-        version: 2.15.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-security:
-    dependencies:
-      lucide-react:
-        specifier: ^0.462.0
-        version: 0.462.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-text:
-    dependencies:
-      lucide-react:
-        specifier: ^0.462.0
-        version: 0.462.0(react@18.3.1)
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@codeexpander/dev-tools-i18n':
-        specifier: workspace:*
-        version: link:../i18n
-      '@codeexpander/dev-tools-ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@codeexpander/plugin-types':
-        specifier: workspace:*
-        version: link:../plugin-types
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.28
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.7(@types/react@18.3.28)
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.27(postcss@8.5.8)
-      postcss:
-        specifier: ^8.4.47
-        version: 8.5.8
-      tailwindcss:
-        specifier: ^3.4.11
-        version: 3.4.19
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.19)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.9.3
-      vite:
-        specifier: ^5.4.1
-        version: 5.4.21(@types/node@22.19.15)
-
-  packages/plugin-types: {}
-
-  packages/ui:
+  dev-tools/ui:
     dependencies:
       '@radix-ui/react-accordion':
         specifier: ^1.2.0
@@ -828,6 +169,665 @@ importers:
       typescript:
         specifier: ^5.5.3
         version: 5.9.3
+
+  examples/plugin-demo-go-http: {}
+
+  examples/plugin-demo-go-stdio: {}
+
+  examples/plugin-demo-nodejs-http: {}
+
+  examples/plugin-demo-nodejs-stdio: {}
+
+  examples/plugin-demo-php-http: {}
+
+  examples/plugin-demo-php-stdio: {}
+
+  examples/plugin-demo-python-http: {}
+
+  examples/plugin-demo-python-stdio: {}
+
+  examples/plugin-demo-ruby-http: {}
+
+  examples/plugin-demo-ruby-stdio: {}
+
+  examples/plugin-demo-shell-stdio: {}
+
+  examples/plugin-demo-tauri-window:
+    dependencies:
+      '@tauri-apps/api':
+        specifier: ^2.10.1
+        version: 2.10.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-ai:
+    dependencies:
+      lucide-react:
+        specifier: ^0.460.0
+        version: 0.460.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-convertors:
+    dependencies:
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
+      lucide-react:
+        specifier: ^0.460.0
+        version: 0.460.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-currency:
+    dependencies:
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-data:
+    dependencies:
+      js-yaml:
+        specifier: ^4.1.0
+        version: 4.1.1
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-date:
+    dependencies:
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-encoding:
+    dependencies:
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-generators:
+    dependencies:
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-graphics:
+    dependencies:
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-html:
+    dependencies:
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-marketing:
+    dependencies:
+      lucide-react:
+        specifier: ^0.460.0
+        version: 0.460.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      recharts:
+        specifier: ^2.15.0
+        version: 2.15.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-security:
+    dependencies:
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
+
+  plugins/plugin-text:
+    dependencies:
+      lucide-react:
+        specifier: ^0.462.0
+        version: 0.462.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@codeexpander/dev-tools-i18n':
+        specifier: workspace:*
+        version: link:../../dev-tools/i18n
+      '@codeexpander/dev-tools-ui':
+        specifier: workspace:*
+        version: link:../../dev-tools/ui
+      '@codeexpander/plugin-types':
+        specifier: workspace:*
+        version: link:../../dev-tools/plugin-types
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.28)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.11.0(vite@5.4.21(@types/node@22.19.15))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.27(postcss@8.5.8)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.5.8
+      tailwindcss:
+        specifier: ^3.4.11
+        version: 3.4.19
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.19)
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
+      vite:
+        specifier: ^5.4.1
+        version: 5.4.21(@types/node@22.19.15)
 
 packages:
 

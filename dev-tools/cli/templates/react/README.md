@@ -2,7 +2,7 @@
 
 CodeExpander 插件 - {{title}}（React，monorepo 内开发）
 
-> 使用 `workspace:*` 依赖，需在 **codeexpander-plugins** 仓库的 `packages/` 目录下创建，并纳入 pnpm workspace。
+> 使用 `workspace:*` 依赖，需在 **codeexpander-plugins** 仓库的 `plugins/` / `examples/` / `dev-tools/` 目录下创建，并纳入 pnpm workspace。
 
 ## 开发
 

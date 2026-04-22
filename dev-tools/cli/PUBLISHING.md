@@ -10,7 +10,7 @@
 ## 发布
 
 ```bash
-cd packages/cli
+cd dev-tools/cli
 pnpm build
 npm publish
 ```

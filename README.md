@@ -6,9 +6,11 @@ Monorepo of **CodeExpander plugins**, managed with pnpm workspaces.
 
 ## Structure
 
-- **packages/ui** — Shared Tailwind + shadcn-style UI components used by plugins.
-- **packages/i18n** — Minimal i18n helpers (`getLocale`, `t`) for plugin locales.
-- **packages/plugin-text** … **packages/plugin-ai** — CodeExpander plugin packages (one per category). Each builds to a `dist/` folder with `plugin.json`, `index.html`, and assets.
+- **dev-tools/ui** — Shared Tailwind + shadcn-style UI components used by plugins.
+- **dev-tools/i18n** — Minimal i18n helpers (`getLocale`, `t`) for plugin locales.
+- **dev-tools/plugin-types** — Shared TypeScript types for CodeExpander plugins.
+- **plugins/* — CodeExpander plugin packages (one per category). Each builds to a `dist/` folder with `plugin.json`, `index.html`, and assets.
+- **examples/* — Demo / example plugin packages.
 
 ## Commands
 
@@ -18,7 +20,7 @@ Monorepo of **CodeExpander plugins**, managed with pnpm workspaces.
 | `pnpm run dev` | Start the default plugin dev server. Use **`make dev`** to pick a plugin interactively, or `make dev PLUGIN=plugin-html` to specify one. |
 | `pnpm run build` | Build all packages. |
 | `pnpm --filter @codeexpander/plugin-text run build` | Build a single plugin. |
-| `pnpm run build:plugins` | Build all plugin packages only (`pnpm --filter './packages/plugin-*' run build`). |
+| `pnpm run build:plugins` | Build all plugin packages only (`pnpm --filter './plugins/*' --filter './examples/*' run build`). |
 | `pnpm run publish:plugins` | Build and publish all plugins to npm in sequence (package names: `@codeexpander/plugin-*`). |
 
 ## One-Click Plugin Publish
@@ -30,7 +32,7 @@ Plugin packages use the **`@codeexpander/plugin-*`** scope (e.g. `@codeexpander/
 1. Log in to npm: `npm login` (requires `@codeexpander` org access or your own scope).
 2. Optional — bump versions (e.g. `0.1.0` → `0.2.0`):
    ```bash
-   pnpm --filter './packages/plugin-*' exec -- npm version patch --no-git-tag-version
+   pnpm --filter './plugins/*' --filter './examples/*' exec -- npm version patch --no-git-tag-version
    ```
 
 **Publish**
@@ -45,7 +47,7 @@ To publish a single plugin:
 
 ```bash
 pnpm --filter @codeexpander/plugin-text run build
-cd packages/plugin-text && pnpm publish --no-git-checks
+cd plugins/plugin-text && pnpm publish --no-git-checks
 ```
 
 ## Verifying Plugin Development
@@ -55,7 +57,7 @@ cd packages/plugin-text && pnpm publish --no-git-checks
 Run the plugin UI in the browser with hot reload. Copy/Toast use fallbacks (e.g. `navigator.clipboard`) when not running inside CodeExpander.
 
 ```bash
-cd packages/plugin-text && pnpm run dev
+cd plugins/plugin-text && pnpm run dev
 # or from repo root:
 pnpm --filter @codeexpander/plugin-text run dev
 ```
@@ -77,8 +79,8 @@ Verify behavior in the real host (e.g. `writeClipboard`, `showToast`, i18n).
    - Open CodeExpander → **Settings** or **Plugin Hub**
    - Choose **Import from directory**
    - Select the plugin’s **dist** folder, e.g.:
-     - `packages/plugin-text/dist`
-     - `packages/plugin-html/dist`
+     - `plugins/plugin-text/dist`
+     - `plugins/plugin-html/dist`
 
 3. **Verify**
    - Search or open the plugin (e.g. “Text Tools”) in CodeExpander.
@@ -89,6 +91,6 @@ Verify behavior in the real host (e.g. `writeClipboard`, `showToast`, i18n).
 
 1. Build the plugin: `pnpm --filter @codeexpander/plugin-text run build`.
 2. In CodeExpander: **Settings** or **Plugin Hub** → **Import from directory**.
-3. Select the plugin’s `dist` folder (e.g. `packages/plugin-text/dist`). It must contain `plugin.json` and the entry file (`index.html`).
+3. Select the plugin’s `dist` folder (e.g. `plugins/plugin-text/dist`). It must contain `plugin.json` and the entry file (`index.html`).
 
 Plugins support multiple languages (en, zh) via `initialPayload.locale` or browser locale.

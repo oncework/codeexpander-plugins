@@ -22,7 +22,7 @@ plugin-demo-nodejs-http/
 
 ## Import
 
-In CodeExpander: **Settings → Import from directory**, then choose `packages/plugin-demo-nodejs-http`.
+In CodeExpander: **Settings → Import from directory**, then choose `examples/plugin-demo-nodejs-http`.
 
 ----------
 
@@ -50,4 +50,4 @@ plugin-demo-nodejs-http/
 
 ## 导入方式
 
-在 CodeExpander 中：进入 **设置 → 从目录导入**，选择 `packages/plugin-demo-nodejs-http` 目录。
+在 CodeExpander 中：进入 **设置 → 从目录导入**，选择 `examples/plugin-demo-nodejs-http` 目录。

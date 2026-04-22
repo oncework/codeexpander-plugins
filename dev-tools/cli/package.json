@@ -38,7 +38,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/oncework/codeexpander-plugins.git",
-    "directory": "packages/cli"
+    "directory": "dev-tools/cli"
   },
   "homepage": "https://github.com/oncework/codeexpander-plugins#readme",
   "bugs": {
