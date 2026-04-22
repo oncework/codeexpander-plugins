@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-minipaint",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "miniPaint - Online graphics editing tool using HTML5 technologies. | miniPaint - 基于 HTML5 技术的在线图形编辑工具。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "minipaint",
+    "minipaint",
+    "paint",
+    "graphics"
+  ]
+}

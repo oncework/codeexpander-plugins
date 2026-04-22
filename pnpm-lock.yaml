@@ -829,6 +829,42 @@ importers:
         specifier: ^5.4.1
         version: 5.4.21(@types/node@22.19.15)
 
+  third-party/plugin-audiomass: {}
+
+  third-party/plugin-blockbench: {}
+
+  third-party/plugin-chili3d: {}
+
+  third-party/plugin-ctool: {}
+
+  third-party/plugin-dpaint: {}
+
+  third-party/plugin-drawio: {}
+
+  third-party/plugin-excalidraw: {}
+
+  third-party/plugin-hoppscotch: {}
+
+  third-party/plugin-jsoncrack: {}
+
+  third-party/plugin-jspaint: {}
+
+  third-party/plugin-klecks: {}
+
+  third-party/plugin-mermaid: {}
+
+  third-party/plugin-method-draw: {}
+
+  third-party/plugin-minipaint: {}
+
+  third-party/plugin-motionity: {}
+
+  third-party/plugin-piskel: {}
+
+  third-party/plugin-regex-vis: {}
+
+  third-party/plugin-svgedit: {}
+
 packages:
 
   '@alloc/quick-lru@5.2.0':

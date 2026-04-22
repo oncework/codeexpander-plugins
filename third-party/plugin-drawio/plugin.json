@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Draw.io",
+  "description": "Configurable diagramming and whiteboarding visualization application.",
+  "category": "productivity",
+  "order": 30,
+  "features": [
+    {
+      "code": "drawio_open",
+      "explain": "{{feature.drawio_open.explain}}",
+      "cmds": [
+        "drawio",
+        "diagram",
+        "flowchart"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Draw.io",
+      "description": "Configurable diagramming and whiteboarding visualization application.",
+      "category": "Productivity",
+      "feature.drawio_open.explain": "Open Draw.io in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Draw.io 图表",
+      "description": "可配置的图表绘制和白板可视化应用。",
+      "category": "高效办公",
+      "feature.drawio_open.explain": "在 CodeExpander 中打开Draw.io 图表。"
+    }
+  }
+}

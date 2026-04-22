@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-svgedit",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "SVGEdit - Powerful web-based SVG vector graphics editor. | SVGEdit - 强大的网页端 SVG 矢量图形编辑器。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "svgedit",
+    "svg",
+    "edit",
+    "vector"
+  ]
+}

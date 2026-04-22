@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "JSON Crack",
+  "description": "JSON visualization tool that transforms data into interactive graphs.",
+  "category": "developer-tools",
+  "order": 30,
+  "features": [
+    {
+      "code": "jsoncrack_open",
+      "explain": "{{feature.jsoncrack_open.explain}}",
+      "cmds": [
+        "json",
+        "visualize",
+        "crack"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "JSON Crack",
+      "description": "JSON visualization tool that transforms data into interactive graphs.",
+      "category": "Developer Tools",
+      "feature.jsoncrack_open.explain": "Open JSON Crack in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "JSON Crack",
+      "description": "将 JSON 数据转换为交互式图表的可视化工具。",
+      "category": "程序员必备",
+      "feature.jsoncrack_open.explain": "在 CodeExpander 中打开JSON Crack。"
+    }
+  }
+}

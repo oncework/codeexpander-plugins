@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-klecks",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Klecks - Web-based painting application with brushes, layers, filters and effects. | Klecks 绘画 - 网页端绘画应用，支持画笔、图层、滤镜和特效。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "klecks",
+    "klecks",
+    "paint",
+    "brush"
+  ]
+}

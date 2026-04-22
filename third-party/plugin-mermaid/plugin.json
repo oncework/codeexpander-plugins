@@ -1,0 +1,32 @@
+{
+  "main": "dist/index.html",
+  "title": "Mermaid Live Editor",
+  "description": "Edit, preview and export Mermaid diagrams.",
+  "category": "developer-tools",
+  "order": 20,
+  "features": [
+    {
+      "code": "mermaid_edit",
+      "explain": "{{feature.mermaid_edit.explain}}",
+      "cmds": ["mermaid", "diagram", "flowchart", "sequence", "gantt"]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Mermaid Live Editor",
+      "description": "Edit, preview and export Mermaid diagrams.",
+      "category": "Developer Tools",
+      "feature.mermaid_edit.explain": "Edit, preview and export Mermaid diagrams in real-time."
+    },
+    "zh_CN": {
+      "title": "Mermaid 编辑器",
+      "description": "实时编辑、预览和导出 Mermaid 图表。",
+      "category": "程序员必备",
+      "feature.mermaid_edit.explain": "实时编辑、预览和导出 Mermaid 流程图、时序图、甘特图等图表。"
+    }
+  }
+}

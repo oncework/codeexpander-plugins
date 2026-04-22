@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "SVGEdit",
+  "description": "Powerful web-based SVG vector graphics editor.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "svgedit_open",
+      "explain": "{{feature.svgedit_open.explain}}",
+      "cmds": [
+        "svg",
+        "edit",
+        "vector"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "SVGEdit",
+      "description": "Powerful web-based SVG vector graphics editor.",
+      "category": "Media",
+      "feature.svgedit_open.explain": "Open SVGEdit in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "SVGEdit",
+      "description": "强大的网页端 SVG 矢量图形编辑器。",
+      "category": "图像视频",
+      "feature.svgedit_open.explain": "在 CodeExpander 中打开SVGEdit。"
+    }
+  }
+}

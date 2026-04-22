@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-blockbench",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Blockbench - Free modern model editor for low-poly models with pixel art textures. | Blockbench 模型 - 免费的现代低多边形像素纹理模型编辑器。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "blockbench",
+    "blockbench",
+    "model",
+    "3d"
+  ]
+}

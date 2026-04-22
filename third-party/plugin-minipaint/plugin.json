@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "miniPaint",
+  "description": "Online graphics editing tool using HTML5 technologies.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "minipaint_open",
+      "explain": "{{feature.minipaint_open.explain}}",
+      "cmds": [
+        "minipaint",
+        "paint",
+        "graphics"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "miniPaint",
+      "description": "Online graphics editing tool using HTML5 technologies.",
+      "category": "Media",
+      "feature.minipaint_open.explain": "Open miniPaint in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "miniPaint",
+      "description": "基于 HTML5 技术的在线图形编辑工具。",
+      "category": "图像视频",
+      "feature.minipaint_open.explain": "在 CodeExpander 中打开miniPaint。"
+    }
+  }
+}

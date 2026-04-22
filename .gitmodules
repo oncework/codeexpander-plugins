@@ -1,0 +1,54 @@
+[submodule "third-party/plugin-mermaid/mermaid-live-editor"]
+	path = third-party/plugin-mermaid/mermaid-live-editor
+	url = https://github.com/mermaid-js/mermaid-live-editor.git
+[submodule "third-party/plugin-excalidraw/excalidraw"]
+	path = third-party/plugin-excalidraw/excalidraw
+	url = https://github.com/excalidraw/excalidraw.git
+[submodule "third-party/plugin-drawio/drawio"]
+	path = third-party/plugin-drawio/drawio
+	url = https://github.com/jgraph/drawio.git
+[submodule "third-party/plugin-jsoncrack/jsoncrack"]
+	path = third-party/plugin-jsoncrack/jsoncrack
+	url = https://github.com/AykutSarac/jsoncrack.com.git
+[submodule "third-party/plugin-regex-vis/regex-vis"]
+	path = third-party/plugin-regex-vis/regex-vis
+	url = https://github.com/Bowen7/regex-vis.git
+[submodule "third-party/plugin-hoppscotch/hoppscotch"]
+	path = third-party/plugin-hoppscotch/hoppscotch
+	url = https://github.com/hoppscotch/hoppscotch.git
+[submodule "third-party/plugin-audiomass/AudioMass"]
+	path = third-party/plugin-audiomass/AudioMass
+	url = https://github.com/pkalogiros/AudioMass.git
+[submodule "third-party/plugin-blockbench/blockbench"]
+	path = third-party/plugin-blockbench/blockbench
+	url = https://github.com/JannisX11/blockbench.git
+[submodule "third-party/plugin-chili3d/chili3d"]
+	path = third-party/plugin-chili3d/chili3d
+	url = https://github.com/xiangechen/chili3d.git
+[submodule "third-party/plugin-dpaint/DPaint-js"]
+	path = third-party/plugin-dpaint/DPaint-js
+	url = https://github.com/steffest/DPaint-js.git
+[submodule "third-party/plugin-jspaint/jspaint"]
+	path = third-party/plugin-jspaint/jspaint
+	url = https://github.com/1j01/jspaint.git
+[submodule "third-party/plugin-klecks/klecks"]
+	path = third-party/plugin-klecks/klecks
+	url = https://github.com/bitbof/klecks.git
+[submodule "third-party/plugin-method-draw/Method-Draw"]
+	path = third-party/plugin-method-draw/Method-Draw
+	url = https://github.com/methodofaction/Method-Draw.git
+[submodule "third-party/plugin-ctool/Ctool"]
+	path = third-party/plugin-ctool/Ctool
+	url = https://github.com/baiy/Ctool.git
+[submodule "third-party/plugin-minipaint/miniPaint"]
+	path = third-party/plugin-minipaint/miniPaint
+	url = https://github.com/viliusle/miniPaint.git
+[submodule "third-party/plugin-motionity/motionity"]
+	path = third-party/plugin-motionity/motionity
+	url = https://github.com/alyssaxuu/motionity.git
+[submodule "third-party/plugin-piskel/piskel"]
+	path = third-party/plugin-piskel/piskel
+	url = https://github.com/piskelapp/piskel.git
+[submodule "third-party/plugin-svgedit/svgedit"]
+	path = third-party/plugin-svgedit/svgedit
+	url = https://github.com/SVG-Edit/svgedit.git

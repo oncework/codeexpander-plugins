@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-motionity",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Motionity - Free web-based motion graphics editor with keyframing and animations. | Motionity - 免费的网页端动态图形编辑器，支持关键帧和动画。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "motionity",
+    "motionity",
+    "motion",
+    "animation"
+  ]
+}

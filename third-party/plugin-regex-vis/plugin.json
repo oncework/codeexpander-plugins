@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Regex Vis",
+  "description": "Regex visualizer and editor with real-time pattern visualization.",
+  "category": "developer-tools",
+  "order": 30,
+  "features": [
+    {
+      "code": "regex-vis_open",
+      "explain": "{{feature.regex-vis_open.explain}}",
+      "cmds": [
+        "regex",
+        "regexp",
+        "visualize"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Regex Vis",
+      "description": "Regex visualizer and editor with real-time pattern visualization.",
+      "category": "Developer Tools",
+      "feature.regex-vis_open.explain": "Open Regex Vis in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "正则可视化",
+      "description": "正则表达式可视化编辑器，支持实时模式可视化。",
+      "category": "程序员必备",
+      "feature.regex-vis_open.explain": "在 CodeExpander 中打开正则可视化。"
+    }
+  }
+}

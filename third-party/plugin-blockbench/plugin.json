@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Blockbench",
+  "description": "Free modern model editor for low-poly models with pixel art textures.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "blockbench_open",
+      "explain": "{{feature.blockbench_open.explain}}",
+      "cmds": [
+        "blockbench",
+        "model",
+        "3d"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Blockbench",
+      "description": "Free modern model editor for low-poly models with pixel art textures.",
+      "category": "Media",
+      "feature.blockbench_open.explain": "Open Blockbench in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Blockbench 模型",
+      "description": "免费的现代低多边形像素纹理模型编辑器。",
+      "category": "图像视频",
+      "feature.blockbench_open.explain": "在 CodeExpander 中打开Blockbench 模型。"
+    }
+  }
+}

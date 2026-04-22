@@ -1,0 +1,24 @@
+{
+  "plugin-audiomass": {
+    "success": true,
+    "time": 1776838676687
+  },
+  "plugin-blockbench": {
+    "success": false,
+    "error": "SIGTERM",
+    "time": 1776852893874
+  },
+  "plugin-chili3d": {
+    "success": false,
+    "error": "SIGTERM",
+    "time": 1776839277388
+  },
+  "plugin-drawio": {
+    "success": true,
+    "time": 1776841714317
+  },
+  "plugin-jspaint": {
+    "success": true,
+    "time": 1776841718331
+  }
+}

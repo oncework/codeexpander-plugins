@@ -1,0 +1,28 @@
+{
+  "name": "@codeexpander/plugin-mermaid",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Mermaid Live Editor - Edit, preview and export Mermaid diagrams. | Mermaid 编辑器 - 实时编辑、预览和导出 Mermaid 图表。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "zx ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "mermaid",
+    "diagram",
+    "flowchart",
+    "markdown",
+    "图表",
+    "流程图"
+  ]
+}

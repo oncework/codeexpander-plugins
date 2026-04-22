@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-excalidraw",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Excalidraw - Virtual collaborative whiteboard for sketching hand-drawn like diagrams. | Excalidraw 白板 - 用于绘制手绘风格图表的虚拟协作白板。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "excalidraw",
+    "excalidraw",
+    "whiteboard",
+    "sketch"
+  ]
+}

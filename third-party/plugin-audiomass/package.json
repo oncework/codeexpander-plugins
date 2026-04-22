@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-audiomass",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "AudioMass - Free web-based audio and waveform editing tool. | AudioMass 音频 - 免费的网页端音频和波形编辑工具。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "audiomass",
+    "audio",
+    "waveform",
+    "edit"
+  ]
+}

@@ -10,7 +10,7 @@ cd "$REPO_ROOT"
 
 # List @codeexpander/plugin-* packages that have a "dev" script (exclude plugin-types)
 PLUGINS=()
-for dir in plugins/plugin-*/ examples/plugin-*/; do
+for dir in plugins/plugin-*/ examples/plugin-*/ third-party/plugin-*/; do
   name=$(basename "$dir")
   [[ "$name" == "plugin-types" ]] && continue
   if [[ -f "$dir/package.json" ]] && grep -q '"dev":' "$dir/package.json" 2>/dev/null; then

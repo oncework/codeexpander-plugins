@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-method-draw",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Method Draw - Simple and streamlined web-based SVG vector drawing application. | Method Draw - 简洁流畅的网页端 SVG 矢量绘图应用。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "method-draw",
+    "svg",
+    "draw",
+    "vector"
+  ]
+}

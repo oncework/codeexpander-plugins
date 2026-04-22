@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "DPaint",
+  "description": "Web-based recreation of the classic Deluxe Paint bitmap graphics editor.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "dpaint_open",
+      "explain": "{{feature.dpaint_open.explain}}",
+      "cmds": [
+        "dpaint",
+        "paint",
+        "bitmap"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "DPaint",
+      "description": "Web-based recreation of the classic Deluxe Paint bitmap graphics editor.",
+      "category": "Media",
+      "feature.dpaint_open.explain": "Open DPaint in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "DPaint 画图",
+      "description": "经典 Deluxe Paint 位图图形编辑器的网页端重现。",
+      "category": "图像视频",
+      "feature.dpaint_open.explain": "在 CodeExpander 中打开DPaint 画图。"
+    }
+  }
+}

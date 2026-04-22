@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Motionity",
+  "description": "Free web-based motion graphics editor with keyframing and animations.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "motionity_open",
+      "explain": "{{feature.motionity_open.explain}}",
+      "cmds": [
+        "motionity",
+        "motion",
+        "animation"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Motionity",
+      "description": "Free web-based motion graphics editor with keyframing and animations.",
+      "category": "Media",
+      "feature.motionity_open.explain": "Open Motionity in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Motionity",
+      "description": "免费的网页端动态图形编辑器，支持关键帧和动画。",
+      "category": "图像视频",
+      "feature.motionity_open.explain": "在 CodeExpander 中打开Motionity。"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-hoppscotch",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Hoppscotch - Open source API development ecosystem for testing and debugging APIs. | Hoppscotch API - 开源 API 开发生态系统，用于测试和调试 API。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "hoppscotch",
+    "api",
+    "http",
+    "rest"
+  ]
+}

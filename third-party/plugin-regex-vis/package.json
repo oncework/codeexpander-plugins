@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-regex-vis",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Regex Vis - Regex visualizer and editor with real-time pattern visualization. | 正则可视化 - 正则表达式可视化编辑器，支持实时模式可视化。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "regex-vis",
+    "regex",
+    "regexp",
+    "visualize"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "AudioMass",
+  "description": "Free web-based audio and waveform editing tool.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "audiomass_open",
+      "explain": "{{feature.audiomass_open.explain}}",
+      "cmds": [
+        "audio",
+        "waveform",
+        "edit"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "AudioMass",
+      "description": "Free web-based audio and waveform editing tool.",
+      "category": "Media",
+      "feature.audiomass_open.explain": "Open AudioMass in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "AudioMass 音频",
+      "description": "免费的网页端音频和波形编辑工具。",
+      "category": "图像视频",
+      "feature.audiomass_open.explain": "在 CodeExpander 中打开AudioMass 音频。"
+    }
+  }
+}

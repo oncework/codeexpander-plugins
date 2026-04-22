@@ -7,8 +7,9 @@
     "dev": "pnpm --filter @codeexpander/plugin-text run dev",
     "create": "node dev-tools/cli/dist/index.cjs",
     "build": "pnpm run build:plugins",
-    "build:plugins": "pnpm --filter './plugins/*' --filter './examples/*' run build",
-    "publish:plugins": "pnpm run build:plugins && pnpm --filter './plugins/*' --filter './examples/*' publish -r --no-git-checks",
+    "build:plugins": "pnpm --filter './plugins/*' --filter './examples/*' --filter './third-party/*' run build",
+    "publish:plugins": "pnpm run build:plugins && pnpm --filter './plugins/*' --filter './examples/*' --filter './third-party/*' publish -r --no-git-checks",
+    "build:third-party": "node scripts/build-third-party-plugins.mjs",
     "lint": "pnpm -r run lint 2>/dev/null || true"
   },
   "engines": {

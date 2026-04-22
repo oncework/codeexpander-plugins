@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Ctool",
+  "description": "Comprehensive developer toolkit for encoding, encryption and format conversion.",
+  "category": "developer-tools",
+  "order": 30,
+  "features": [
+    {
+      "code": "ctool_open",
+      "explain": "{{feature.ctool_open.explain}}",
+      "cmds": [
+        "ctool",
+        "encode",
+        "encrypt"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Ctool",
+      "description": "Comprehensive developer toolkit for encoding, encryption and format conversion.",
+      "category": "Developer Tools",
+      "feature.ctool_open.explain": "Open Ctool in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Ctool 工具箱",
+      "description": "开发者综合工具箱，支持编解码、加解密和格式转换。",
+      "category": "程序员必备",
+      "feature.ctool_open.explain": "在 CodeExpander 中打开Ctool 工具箱。"
+    }
+  }
+}

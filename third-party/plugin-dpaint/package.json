@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-dpaint",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "DPaint - Web-based recreation of the classic Deluxe Paint bitmap graphics editor. | DPaint 画图 - 经典 Deluxe Paint 位图图形编辑器的网页端重现。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "dpaint",
+    "dpaint",
+    "paint",
+    "bitmap"
+  ]
+}

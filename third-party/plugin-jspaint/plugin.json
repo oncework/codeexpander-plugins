@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "JSPaint",
+  "description": "Pixel-perfect web-based MS Paint remake with modern improvements.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "jspaint_open",
+      "explain": "{{feature.jspaint_open.explain}}",
+      "cmds": [
+        "jspaint",
+        "paint",
+        "mspaint"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "JSPaint",
+      "description": "Pixel-perfect web-based MS Paint remake with modern improvements.",
+      "category": "Media",
+      "feature.jspaint_open.explain": "Open JSPaint in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "JSPaint 画图",
+      "description": "像素级还原的网页端 MS Paint 重制版。",
+      "category": "图像视频",
+      "feature.jspaint_open.explain": "在 CodeExpander 中打开JSPaint 画图。"
+    }
+  }
+}

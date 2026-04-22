@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-drawio",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Draw.io - Configurable diagramming and whiteboarding visualization application. | Draw.io 图表 - 可配置的图表绘制和白板可视化应用。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "drawio",
+    "drawio",
+    "diagram",
+    "flowchart"
+  ]
+}

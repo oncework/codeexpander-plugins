@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Klecks",
+  "description": "Web-based painting application with brushes, layers, filters and effects.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "klecks_open",
+      "explain": "{{feature.klecks_open.explain}}",
+      "cmds": [
+        "klecks",
+        "paint",
+        "brush"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Klecks",
+      "description": "Web-based painting application with brushes, layers, filters and effects.",
+      "category": "Media",
+      "feature.klecks_open.explain": "Open Klecks in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Klecks 绘画",
+      "description": "网页端绘画应用，支持画笔、图层、滤镜和特效。",
+      "category": "图像视频",
+      "feature.klecks_open.explain": "在 CodeExpander 中打开Klecks 绘画。"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Chili3D",
+  "description": "Web-based 3D CAD application for online model design and editing.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "chili3d_open",
+      "explain": "{{feature.chili3d_open.explain}}",
+      "cmds": [
+        "chili3d",
+        "cad",
+        "3d"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Chili3D",
+      "description": "Web-based 3D CAD application for online model design and editing.",
+      "category": "Media",
+      "feature.chili3d_open.explain": "Open Chili3D in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Chili3D CAD",
+      "description": "网页端 3D CAD 应用，用于在线模型设计和编辑。",
+      "category": "图像视频",
+      "feature.chili3d_open.explain": "在 CodeExpander 中打开Chili3D CAD。"
+    }
+  }
+}

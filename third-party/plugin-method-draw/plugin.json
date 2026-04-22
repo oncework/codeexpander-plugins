@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Method Draw",
+  "description": "Simple and streamlined web-based SVG vector drawing application.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "method-draw_open",
+      "explain": "{{feature.method-draw_open.explain}}",
+      "cmds": [
+        "svg",
+        "draw",
+        "vector"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Method Draw",
+      "description": "Simple and streamlined web-based SVG vector drawing application.",
+      "category": "Media",
+      "feature.method-draw_open.explain": "Open Method Draw in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Method Draw",
+      "description": "简洁流畅的网页端 SVG 矢量绘图应用。",
+      "category": "图像视频",
+      "feature.method-draw_open.explain": "在 CodeExpander 中打开Method Draw。"
+    }
+  }
+}

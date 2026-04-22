@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Excalidraw",
+  "description": "Virtual collaborative whiteboard for sketching hand-drawn like diagrams.",
+  "category": "productivity",
+  "order": 30,
+  "features": [
+    {
+      "code": "excalidraw_open",
+      "explain": "{{feature.excalidraw_open.explain}}",
+      "cmds": [
+        "excalidraw",
+        "whiteboard",
+        "sketch"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Excalidraw",
+      "description": "Virtual collaborative whiteboard for sketching hand-drawn like diagrams.",
+      "category": "Productivity",
+      "feature.excalidraw_open.explain": "Open Excalidraw in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Excalidraw 白板",
+      "description": "用于绘制手绘风格图表的虚拟协作白板。",
+      "category": "高效办公",
+      "feature.excalidraw_open.explain": "在 CodeExpander 中打开Excalidraw 白板。"
+    }
+  }
+}

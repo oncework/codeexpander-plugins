@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-chili3d",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Chili3D - Web-based 3D CAD application for online model design and editing. | Chili3D CAD - 网页端 3D CAD 应用，用于在线模型设计和编辑。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "chili3d",
+    "chili3d",
+    "cad",
+    "3d"
+  ]
+}

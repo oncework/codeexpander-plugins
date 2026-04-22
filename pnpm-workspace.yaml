@@ -2,3 +2,4 @@ packages:
   - "plugins/*"
   - "examples/*"
   - "dev-tools/*"
+  - "third-party/*"

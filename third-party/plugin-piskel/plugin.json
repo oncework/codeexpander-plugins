@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Piskel",
+  "description": "Free online pixel art editor and animated sprite creation tool.",
+  "category": "media",
+  "order": 30,
+  "features": [
+    {
+      "code": "piskel_open",
+      "explain": "{{feature.piskel_open.explain}}",
+      "cmds": [
+        "piskel",
+        "pixel",
+        "sprite"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Piskel",
+      "description": "Free online pixel art editor and animated sprite creation tool.",
+      "category": "Media",
+      "feature.piskel_open.explain": "Open Piskel in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Piskel 像素",
+      "description": "免费的在线像素画编辑器和动画精灵创建工具。",
+      "category": "图像视频",
+      "feature.piskel_open.explain": "在 CodeExpander 中打开Piskel 像素。"
+    }
+  }
+}

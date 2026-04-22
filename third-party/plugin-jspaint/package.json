@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-jspaint",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "JSPaint - Pixel-perfect web-based MS Paint remake with modern improvements. | JSPaint 画图 - 像素级还原的网页端 MS Paint 重制版。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "jspaint",
+    "jspaint",
+    "paint",
+    "mspaint"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@codeexpander/plugin-piskel",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Piskel - Free online pixel art editor and animated sprite creation tool. | Piskel 像素 - 免费的在线像素画编辑器和动画精灵创建工具。",
+  "files": [
+    "dist/",
+    "plugin.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node ./build.mjs"
+  },
+  "keywords": [
+    "codeexpander",
+    "plugin",
+    "piskel",
+    "piskel",
+    "pixel",
+    "sprite"
+  ]
+}

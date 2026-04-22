@@ -1,0 +1,36 @@
+{
+  "main": "dist/index.html",
+  "title": "Hoppscotch",
+  "description": "Open source API development ecosystem for testing and debugging APIs.",
+  "category": "developer-tools",
+  "order": 30,
+  "features": [
+    {
+      "code": "hoppscotch_open",
+      "explain": "{{feature.hoppscotch_open.explain}}",
+      "cmds": [
+        "api",
+        "http",
+        "rest"
+      ]
+    }
+  ],
+  "pluginSetting": {
+    "height": 800,
+    "width": 1200
+  },
+  "i18n": {
+    "en": {
+      "title": "Hoppscotch",
+      "description": "Open source API development ecosystem for testing and debugging APIs.",
+      "category": "Developer Tools",
+      "feature.hoppscotch_open.explain": "Open Hoppscotch in CodeExpander."
+    },
+    "zh_CN": {
+      "title": "Hoppscotch API",
+      "description": "开源 API 开发生态系统，用于测试和调试 API。",
+      "category": "程序员必备",
+      "feature.hoppscotch_open.explain": "在 CodeExpander 中打开Hoppscotch API。"
+    }
+  }
+}
