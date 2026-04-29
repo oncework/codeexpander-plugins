@@ -290,7 +290,7 @@ CodeExpander 可以作为 MCP（Model Context Protocol）服务器运行，让�
 
 | 工具 | 说明 |
 |------|------|
-| **create_plugin** | 根据 `manifest`（对象）和 `files`（`{ filename, content }` 数组）创建插件，可选 `groupKey`（默认放在 MCP 专用分组）。返回 `snippetKey`。 |
+| **create_plugin** | 根据 `manifest`（对象）和 `files`（`{ filename, content }` 数组）创建插件，可选 `groupKey`（默认放在 MCP 专用分组）。返回 `snippetKey`。宿主将每个文件存为片段文件时 **env** 为 **`plain`**（纯文本/代码），与目录导入一致，**不要**用 `text`。 |
 | **list_plugins** | 列出插件，可选 `groupKey` 过滤。返回插件数组。 |
 | **get_plugin_schema** | 返回 plugin.json 的 schema 与文档 URL，方便 AI 按规范生成插件。 |
 
@@ -308,7 +308,7 @@ CodeExpander 可以作为 MCP（Model Context Protocol）服务器运行，让�
 如果暂时不使用 MCP，可以通过以下方式将插件导入 CodeExpander：
 
 - **从目录导入**：在设置页或插件开发入口中选择“从目录导入”，指向一个包含 `plugin.json` 与入口文件的文件夹。  
-- **直接在片段中粘贴**：创建一个多文件片段，将 `plugin.json` 与入口文件等一并加入该片段，然后在片段设置中启用插件模式。  
+- **直接在片段中粘贴**：创建一个多文件片段，将 `plugin.json` 与入口文件等一并加入该片段；每个文件的片段 **env** 请设为 **`plain`**（纯文本/代码），不要用 `text`。然后在片段设置中启用插件模式。  
 
 导入后，插件会立即出现在搜索与插件列表中。
 

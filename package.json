@@ -10,6 +10,7 @@
     "build:plugins": "pnpm --filter './plugins/*' --filter './examples/*' --filter './third-party/*' run build",
     "publish:plugins": "pnpm run build:plugins && pnpm --filter './plugins/*' --filter './examples/*' --filter './third-party/*' publish -r --no-git-checks",
     "build:third-party": "node scripts/build-third-party-plugins.mjs",
+    "publish:plugin": "node scripts/publish-plugins.mjs",
     "lint": "pnpm -r run lint 2>/dev/null || true"
   },
   "engines": {

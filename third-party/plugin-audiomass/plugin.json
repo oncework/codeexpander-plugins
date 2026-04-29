@@ -4,6 +4,7 @@
   "description": "Free web-based audio and waveform editing tool.",
   "category": "media",
   "order": 30,
+  "logo": "https://cdn.jsdelivr.net/gh/pkalogiros/AudioMass@latest/src/icon.png",
   "features": [
     {
       "code": "audiomass_open",

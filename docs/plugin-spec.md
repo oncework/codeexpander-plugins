@@ -357,7 +357,7 @@ CodeExpander can expose an MCP (Model Context Protocol) server so any MCP client
 
 | Tool | Description |
 |------|-------------|
-| **create_plugin** | Create a plugin from `manifest` (object) and `files` (array of `{ filename, content }`). Optional `groupKey` (default: root). Returns a `snippetKey`. |
+| **create_plugin** | Create a plugin from `manifest` (object) and `files` (array of `{ filename, content }`). Optional `groupKey` (default: root). Returns a `snippetKey`. Host stores each file as a snippet file with **env** `plain` (plain text / code), consistent with directory import — not `text`. |
 | **list_plugins** | List existing plugins. Optional `groupKey` filter. Returns a `plugins` array. |
 | **get_plugin_schema** | Return the `plugin.json` schema and documentation URL to guide AI‑generated plugins. |
 
@@ -384,6 +384,7 @@ If you do not use MCP, you can still add plugins to CodeExpander in two ways:
 2. **Paste files into a snippet**  
    - Create a new multi‑file snippet.  
    - Add `plugin.json` and the entry file (and any other plugin files).  
+   - Set each file’s snippet **env** to **`plain`** for text/code (not `text`).  
    - Enable **plugin mode** in the snippet options.
 
 Once imported, the plugin appears in search and in the plugin list immediately.
