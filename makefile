@@ -41,6 +41,13 @@ list-plugins:
 list-third-party-plugins:
 	@node "$(PWD)/scripts/publish-plugins.mjs" --scope=third-party --list
 
+# Update git submodules (init & sync)
+# Usage: make update-submodules          # init/fetch submodules
+#        make update-submodules REMOTE=1 # update to latest remote
+#        make update-submodules DEPTH=1  # shallow clone (depth 1)
+update-submodules:
+	@git submodule update --init --recursive $(if $(DEPTH),--depth $(DEPTH)) $(if $(REMOTE),--remote)
+
 # Bump patch version for all plugins
 version:
 	@pnpm --filter './plugins/*' --filter './examples/*' --filter './third-party/*' exec -- npm version patch --no-git-tag-version
@@ -61,4 +68,4 @@ create:
 test:
 	@pnpm -r run test 2>/dev/null || echo "No tests found"
 
-.PHONY: install dev build build-third-party list-third-party publish publish-plugins publish-third-party publish-plugin list-plugins list-third-party-plugins version lint clean create test
+.PHONY: install dev build build-third-party list-third-party publish publish-plugins publish-third-party publish-plugin list-plugins list-third-party-plugins update-submodules version lint clean create test
