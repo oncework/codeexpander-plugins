@@ -23,18 +23,23 @@ build-third-party:
 list-third-party:
 	@node "$(PWD)/scripts/build-third-party-plugins.mjs" --list
 
-# Publish all plugins at once
-publish:
-	@pnpm run publish:plugins
+# Publish plugins in plugins/ (interactive, or specify with PLUGIN=)
+# Usage: make publish-plugins PLUGIN=text
+publish-plugins:
+	@node "$(PWD)/scripts/publish-plugins.mjs" --scope=plugins $(if $(PLUGIN),--plugin=$(PLUGIN))
 
-# Publish plugins one by one (interactive)
-# Usage: make publish-plugin PLUGIN=blockbench
-publish-plugin:
-	@node "$(PWD)/scripts/publish-plugins.mjs" $(if $(PLUGIN),--plugin=$(PLUGIN))
+# Publish plugins in third-party/ (interactive, or specify with PLUGIN=)
+# Usage: make publish-third-party PLUGIN=drawio
+publish-third-party:
+	@node "$(PWD)/scripts/publish-plugins.mjs" --scope=third-party $(if $(PLUGIN),--plugin=$(PLUGIN))
 
-# List all publishable plugins
+# List publishable plugins in plugins/
 list-plugins:
-	@node "$(PWD)/scripts/publish-plugins.mjs" --list
+	@node "$(PWD)/scripts/publish-plugins.mjs" --scope=plugins --list
+
+# List publishable plugins in third-party/
+list-third-party-plugins:
+	@node "$(PWD)/scripts/publish-plugins.mjs" --scope=third-party --list
 
 # Bump patch version for all plugins
 version:
@@ -56,4 +61,4 @@ create:
 test:
 	@pnpm -r run test 2>/dev/null || echo "No tests found"
 
-.PHONY: install dev build build-third-party list-third-party publish publish-plugin list-plugins version lint clean create test
+.PHONY: install dev build build-third-party list-third-party publish publish-plugins publish-third-party publish-plugin list-plugins list-third-party-plugins version lint clean create test
