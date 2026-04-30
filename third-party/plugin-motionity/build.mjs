@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env zx
 
 import { minify as minifyHTML } from "html-minifier-terser";
 import { minify as minifyJS } from "terser";
@@ -6,7 +6,6 @@ import CleanCSS from "clean-css";
 import fse from "fs-extra";
 import path from "path";
 import { fileURLToPath } from "url";
-import { readFileSync, writeFileSync } from "fs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const sourceDir = path.join(__dirname, "motionity/src");
@@ -167,16 +166,5 @@ if (await fse.pathExists(jsSourceDir)) {
 
   await processJSFiles(jsSourceDir);
 }
-
-// Copy plugin.json into dist and update main field
-console.log("\nCopying plugin.json to dist...");
-const pluginJson = JSON.parse(
-  readFileSync(path.join(__dirname, "plugin.json"), "utf-8"),
-);
-pluginJson.main = "index.html";
-writeFileSync(
-  path.join(distDir, "plugin.json"),
-  JSON.stringify(pluginJson, null, 2),
-);
 
 console.log("\nBuild completed!\n");

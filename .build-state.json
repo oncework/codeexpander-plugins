@@ -25,15 +25,14 @@
   },
   "plugin-dpaint": {
     "success": true,
-    "time": 1777451040487
+    "time": 1777544298531
   },
   "plugin-excalidraw": {
     "success": true,
-    "time": 1777451350168
+    "time": 1777544419910
   },
   "plugin-hoppscotch": {
-    "success": false,
-    "error": "exit code 1",
-    "time": 1777456870271
+    "success": true,
+    "time": 1777545493026
   }
 }

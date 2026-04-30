@@ -49,11 +49,11 @@ if (existsSync(mainTsPath)) {
 
 // Install dependencies
 console.log("Installing dependencies...");
-await $`CI=true pnpm install --ignore-workspace`;
+await $`pnpm install`;
 
 // Build the selfhost-web package
 console.log("Building hoppscotch-selfhost-web package...");
-await $`CI=true pnpm run generate`;
+await $`pnpm run generate`;
 
 // Return to parent directory
 cd(__dirname);
@@ -85,15 +85,6 @@ if (existsSync(sourceDir)) {
     rmSync(mapFile, { force: true });
   });
   console.log(`Removed ${mapFiles.length} sourcemap file(s)`);
-
-  const pluginJson = JSON.parse(
-    readFileSync(join(__dirname, "plugin.json"), "utf-8"),
-  );
-  pluginJson.main = "index.html";
-  writeFileSync(
-    join(distDir, "plugin.json"),
-    JSON.stringify(pluginJson, null, 2),
-  );
 
   console.log("Build completed successfully!");
 } else {

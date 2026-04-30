@@ -1,7 +1,7 @@
 #!/usr/bin/env zx
 
 import { cd, $ } from "zx";
-import { existsSync, rmSync, cpSync, readFileSync, writeFileSync } from "fs";
+import { existsSync, rmSync, cpSync } from "fs";
 import { join } from "path";
 import { glob } from "glob";
 
@@ -12,11 +12,11 @@ cd(join(__dirname, "excalidraw"));
 
 // Install dependencies
 console.log("Installing dependencies...");
-await $`CI=true yarn --ignore-engines`;
+await $`yarn`;
 
 // Build project
 console.log("Building excalidraw...");
-await $`CI=true yarn --ignore-engines --cwd ./excalidraw-app build`;
+await $`yarn build`;
 
 // Return to parent directory
 cd(__dirname);
@@ -43,15 +43,6 @@ if (existsSync(sourceDir)) {
     rmSync(mapFile, { force: true });
   });
   console.log(`Removed ${mapFiles.length} sourcemap file(s)`);
-
-  const pluginJson = JSON.parse(
-    readFileSync(join(__dirname, "plugin.json"), "utf-8"),
-  );
-  pluginJson.main = "index.html";
-  writeFileSync(
-    join(distDir, "plugin.json"),
-    JSON.stringify(pluginJson, null, 2),
-  );
 
   console.log("Build completed successfully!");
 } else {

@@ -1,6 +1,6 @@
 #!/usr/bin/env zx
 
-import { $, cd } from "zx";
+import { cd, $ } from "zx";
 import { existsSync, rmSync, cpSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 
@@ -11,11 +11,11 @@ cd(join(__dirname, "regex-vis"));
 
 // Install dependencies
 console.log("Installing dependencies...");
-await $`CI=true pnpm install --ignore-workspace`;
+await $`pnpm install`;
 
 // Build project
 console.log("Building regex-vis...");
-await $`CI=true pnpm run build`;
+await $`pnpm run build`;
 
 // Return to parent directory
 cd(__dirname);
@@ -56,15 +56,6 @@ if (existsSync(sourceDir)) {
     writeFileSync(indexHtmlPath, htmlContent, "utf-8");
     console.log("Cloudflare Analytics script removed");
   }
-
-  const pluginJson = JSON.parse(
-    readFileSync(join(__dirname, "plugin.json"), "utf-8"),
-  );
-  pluginJson.main = "index.html";
-  writeFileSync(
-    join(distDir, "plugin.json"),
-    JSON.stringify(pluginJson, null, 2),
-  );
 
   console.log("Build completed successfully!");
 } else {

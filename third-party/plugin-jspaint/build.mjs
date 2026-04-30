@@ -7,7 +7,6 @@ import fse from "fs-extra";
 import path from "path";
 import { fileURLToPath } from "url";
 import { glob } from "glob";
-import { readFileSync, writeFileSync } from "fs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const sourceDir = path.join(__dirname, "jspaint");
@@ -229,14 +228,5 @@ for (const mapFile of mapFiles) {
   await fse.remove(mapFile);
 }
 console.log(`  ✓ Removed ${mapFiles.length} sourcemap file(s)`);
-
-const pluginJson = JSON.parse(
-  readFileSync(path.join(__dirname, "plugin.json"), "utf-8"),
-);
-pluginJson.main = "index.html";
-writeFileSync(
-  path.join(distDir, "plugin.json"),
-  JSON.stringify(pluginJson, null, 2),
-);
 
 console.log("\nBuild completed!\n");

@@ -17,7 +17,7 @@ build:
 # Build third-party plugins (interactive if PLUGIN is not set)
 # Usage: make build-third-party PLUGIN=blockbench,drawio
 build-third-party:
-	@node "$(PWD)/scripts/build-third-party-plugins.mjs" $(if $(PLUGIN),--plugin=$(PLUGIN))
+	@node "$(PWD)/scripts/build-third-party-plugins.mjs" $(if $(PLUGIN),--plugin=$(PLUGIN)) --force
 
 # List all third-party plugins
 list-third-party:

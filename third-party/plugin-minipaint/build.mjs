@@ -1,14 +1,7 @@
 #!/usr/bin/env zx
 
 import { cd, $ } from "zx";
-import {
-  existsSync,
-  rmSync,
-  cpSync,
-  mkdirSync,
-  readFileSync,
-  writeFileSync,
-} from "fs";
+import { existsSync, rmSync, cpSync, mkdirSync } from "fs";
 import { join } from "path";
 import { glob } from "glob";
 
@@ -67,15 +60,5 @@ mapFiles.forEach((mapFile) => {
   rmSync(mapFile, { force: true });
 });
 console.log(`Removed ${mapFiles.length} sourcemap file(s)`);
-
-// Write plugin.json
-const pluginJson = JSON.parse(
-  readFileSync(join(__dirname, "plugin.json"), "utf-8"),
-);
-pluginJson.main = "index.html";
-writeFileSync(
-  join(distDir, "plugin.json"),
-  JSON.stringify(pluginJson, null, 2),
-);
 
 console.log("Build completed successfully!");
