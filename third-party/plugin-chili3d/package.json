@@ -15,6 +15,10 @@
   "scripts": {
     "build": "node ./build.mjs"
   },
+  "devDependencies": {
+    "glob": "^13.0.0",
+    "zx": "^8.8.5"
+  },
   "keywords": [
     "codeexpander",
     "plugin",

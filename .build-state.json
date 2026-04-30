@@ -8,9 +8,8 @@
     "time": 1777430063792
   },
   "plugin-chili3d": {
-    "success": false,
-    "error": "exit code 1",
-    "time": 1777431087584
+    "success": true,
+    "time": 1777449934352
   },
   "plugin-drawio": {
     "success": true,
@@ -21,8 +20,20 @@
     "time": 1776841718331
   },
   "plugin-ctool": {
+    "success": true,
+    "time": 1777450848919
+  },
+  "plugin-dpaint": {
+    "success": true,
+    "time": 1777451040487
+  },
+  "plugin-excalidraw": {
+    "success": true,
+    "time": 1777451350168
+  },
+  "plugin-hoppscotch": {
     "success": false,
     "error": "exit code 1",
-    "time": 1777431157407
+    "time": 1777456870271
   }
 }

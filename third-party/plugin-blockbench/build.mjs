@@ -1,45 +1,63 @@
-#!/usr/bin/env node
-import { execSync } from 'child_process'
-import { existsSync, rmSync, cpSync, readFileSync, writeFileSync, readdirSync, statSync, unlinkSync } from 'fs'
-import { join } from 'path'
+#!/usr/bin/env zx
 
-const __dirname = import.meta.dirname
+import { cd, $ } from "zx";
+import { existsSync, rmSync, cpSync, readFileSync, writeFileSync } from "fs";
+import { join } from "path";
+import { glob } from "glob";
 
-function removeMapFiles(dir) {
-  const entries = readdirSync(dir, { withFileTypes: true })
-  for (const entry of entries) {
-    const fullPath = join(dir, entry.name)
-    if (entry.isDirectory()) removeMapFiles(fullPath)
-    else if (entry.name.endsWith('.map')) unlinkSync(fullPath)
-  }
+const __dirname = import.meta.dirname;
+
+// Enter blockbench directory
+cd(join(__dirname, "blockbench"));
+
+// Install dependencies
+console.log("Installing dependencies...");
+await $`npm install`;
+
+// Build web version
+console.log("Building blockbench web version...");
+await $`npm run build-web`;
+
+// Return to parent directory
+cd(__dirname);
+
+// Define dist directory
+const distDir = join(__dirname, "dist");
+const blockbenchDir = join(__dirname, "blockbench");
+
+// Clean and create dist directory
+console.log("Copying build artifacts to dist...");
+
+if (existsSync(distDir)) {
+  rmSync(distDir, { recursive: true, force: true });
 }
 
-const submoduleDir = join(__dirname, 'blockbench')
-
-console.log('Installing dependencies...')
-execSync('npm install', { cwd: submoduleDir, stdio: 'inherit' })
-
-console.log('Building blockbench...')
-execSync('npm run build-web', { cwd: submoduleDir, stdio: 'inherit' })
-
-const distDir = join(__dirname, 'dist')
-
-console.log('Copying build artifacts to dist...')
-if (existsSync(distDir)) rmSync(distDir, { recursive: true, force: true })
-
+// Copy necessary files to dist directory
 // Blockbench web build outputs to the root directory
-cpSync(join(submoduleDir, 'index.html'), join(distDir, 'index.html'))
-cpSync(join(submoduleDir, 'css'), join(distDir, 'css'), { recursive: true })
-cpSync(join(submoduleDir, 'font'), join(distDir, 'font'), { recursive: true })
-cpSync(join(submoduleDir, 'assets'), join(distDir, 'assets'), { recursive: true })
-cpSync(join(submoduleDir, 'dist'), join(distDir, 'dist'), { recursive: true })
-cpSync(join(submoduleDir, 'favicon.png'), join(distDir, 'favicon.png'))
+cpSync(join(blockbenchDir, "index.html"), join(distDir, "index.html"));
+cpSync(join(blockbenchDir, "css"), join(distDir, "css"), { recursive: true });
+cpSync(join(blockbenchDir, "font"), join(distDir, "font"), { recursive: true });
+cpSync(join(blockbenchDir, "assets"), join(distDir, "assets"), {
+  recursive: true,
+});
+cpSync(join(blockbenchDir, "dist"), join(distDir, "dist"), { recursive: true });
+cpSync(join(blockbenchDir, "favicon.png"), join(distDir, "favicon.png"));
 
-removeMapFiles(distDir)
-console.log('Sourcemap files removed')
+// Remove all .map files from dist directory
+console.log("Removing sourcemap files...");
+const mapFiles = await glob("**/*.map", { cwd: distDir, absolute: true });
+mapFiles.forEach((mapFile) => {
+  rmSync(mapFile, { force: true });
+});
+console.log(`Removed ${mapFiles.length} sourcemap file(s)`);
 
-const pluginJson = JSON.parse(readFileSync(join(__dirname, 'plugin.json'), 'utf-8'))
-pluginJson.main = 'index.html'
-writeFileSync(join(distDir, 'plugin.json'), JSON.stringify(pluginJson, null, 2))
+const pluginJson = JSON.parse(
+  readFileSync(join(__dirname, "plugin.json"), "utf-8"),
+);
+pluginJson.main = "index.html";
+writeFileSync(
+  join(distDir, "plugin.json"),
+  JSON.stringify(pluginJson, null, 2),
+);
 
-console.log('Build completed successfully!')
+console.log("Build completed successfully!");

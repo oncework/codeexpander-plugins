@@ -1,46 +1,51 @@
-#!/usr/bin/env node
-import { execSync } from 'child_process'
-import { existsSync, rmSync, cpSync, readFileSync, writeFileSync, readdirSync, statSync, unlinkSync } from 'fs'
-import { join } from 'path'
+#!/usr/bin/env zx
 
-const __dirname = import.meta.dirname
+import { $, cd } from "zx";
+import { existsSync, rmSync, cpSync, readFileSync, writeFileSync } from "fs";
+import { join } from "path";
+import chalk from "chalk";
 
-function removeMapFiles(dir) {
-  const entries = readdirSync(dir, { withFileTypes: true })
-  for (const entry of entries) {
-    const fullPath = join(dir, entry.name)
-    if (entry.isDirectory()) removeMapFiles(fullPath)
-    else if (entry.name.endsWith('.map')) unlinkSync(fullPath)
-  }
+const __dirname = import.meta.dirname;
+
+// Enter piskel directory
+cd(join(__dirname, "piskel"));
+
+// Install dependencies
+console.log("Installing dependencies...");
+await $`CI=true npm install`;
+
+// Build project
+console.log("Building piskel...");
+await $`CI=true npm run build`;
+
+// Return to parent directory
+cd(__dirname);
+
+// Clean and create dist directory
+const sourceDir = join(__dirname, "piskel/dest/prod");
+const distDir = join(__dirname, "dist");
+
+console.log("Copying build artifacts to dist...");
+if (existsSync(distDir)) {
+  rmSync(distDir, { recursive: true, force: true });
 }
 
-const submoduleDir = join(__dirname, 'piskel')
-
-console.log('Installing dependencies...')
-execSync('CI=true npm install', { cwd: submoduleDir, stdio: 'inherit' })
-
-console.log('Building piskel...')
-execSync('CI=true npm run build', { cwd: submoduleDir, stdio: 'inherit' })
-
-const sourceDir = join(__dirname, 'piskel/dest/prod')
-const distDir = join(__dirname, 'dist')
-
-console.log('Copying build artifacts to dist...')
-if (existsSync(distDir)) rmSync(distDir, { recursive: true, force: true })
-
+// Copy build artifacts to dist directory
 if (existsSync(sourceDir)) {
-  cpSync(sourceDir, distDir, { recursive: true })
-  removeMapFiles(distDir)
-  console.log('Sourcemap files removed')
+  cpSync(sourceDir, distDir, { recursive: true });
 
-  const pluginJson = JSON.parse(readFileSync(join(__dirname, 'plugin.json'), 'utf-8'))
-  pluginJson.main = 'index.html'
-  writeFileSync(join(distDir, 'plugin.json'), JSON.stringify(pluginJson, null, 2))
+  const pluginJson = JSON.parse(
+    readFileSync(join(__dirname, "plugin.json"), "utf-8"),
+  );
+  pluginJson.main = "index.html";
+  writeFileSync(
+    join(distDir, "plugin.json"),
+    JSON.stringify(pluginJson, null, 2),
+  );
 
-  console.log('Build completed successfully!')
+  console.log(chalk.green("✓ Build completed successfully!"));
 } else {
-  console.error('Error: Build output directory not found!')
-  console.error('Expected: ' + sourceDir)
-  process.exit(1)
+  console.error("Error: Build output directory not found!");
+  console.error("Expected: " + sourceDir);
+  process.exit(1);
 }
-

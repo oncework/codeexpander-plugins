@@ -1,46 +1,73 @@
-#!/usr/bin/env node
-import { execSync } from 'child_process'
-import { existsSync, rmSync, cpSync, readFileSync, writeFileSync, readdirSync, statSync, unlinkSync } from 'fs'
-import { join } from 'path'
+#!/usr/bin/env zx
 
-const __dirname = import.meta.dirname
+import { $, cd } from "zx";
+import { existsSync, rmSync, cpSync, readFileSync, writeFileSync } from "fs";
+import { join } from "path";
 
-function removeMapFiles(dir) {
-  const entries = readdirSync(dir, { withFileTypes: true })
-  for (const entry of entries) {
-    const fullPath = join(dir, entry.name)
-    if (entry.isDirectory()) removeMapFiles(fullPath)
-    else if (entry.name.endsWith('.map')) unlinkSync(fullPath)
-  }
+const __dirname = import.meta.dirname;
+
+// Enter regex-vis directory
+cd(join(__dirname, "regex-vis"));
+
+// Install dependencies
+console.log("Installing dependencies...");
+await $`CI=true pnpm install --ignore-workspace`;
+
+// Build project
+console.log("Building regex-vis...");
+await $`CI=true pnpm run build`;
+
+// Return to parent directory
+cd(__dirname);
+
+// Define source and destination paths
+const sourceDir = join(__dirname, "regex-vis", "dist");
+const distDir = join(__dirname, "dist");
+
+// Clean and create dist directory
+console.log("Copying build artifacts to dist...");
+
+if (existsSync(distDir)) {
+  rmSync(distDir, { recursive: true, force: true });
 }
 
-const submoduleDir = join(__dirname, 'regex-vis')
-
-console.log('Installing dependencies...')
-execSync('CI=true pnpm install --ignore-workspace', { cwd: submoduleDir, stdio: 'inherit' })
-
-console.log('Building regex-vis...')
-execSync('CI=true pnpm run build', { cwd: submoduleDir, stdio: 'inherit' })
-
-const sourceDir = join(__dirname, 'regex-vis/dist')
-const distDir = join(__dirname, 'dist')
-
-console.log('Copying build artifacts to dist...')
-if (existsSync(distDir)) rmSync(distDir, { recursive: true, force: true })
-
+// Copy build artifacts to dist directory
 if (existsSync(sourceDir)) {
-  cpSync(sourceDir, distDir, { recursive: true })
-  removeMapFiles(distDir)
-  console.log('Sourcemap files removed')
+  cpSync(sourceDir, distDir, { recursive: true });
 
-  const pluginJson = JSON.parse(readFileSync(join(__dirname, 'plugin.json'), 'utf-8'))
-  pluginJson.main = 'index.html'
-  writeFileSync(join(distDir, 'plugin.json'), JSON.stringify(pluginJson, null, 2))
+  // Remove Cloudflare Analytics script from index.html
+  console.log("Removing Cloudflare Analytics script...");
+  const indexHtmlPath = join(distDir, "index.html");
+  if (existsSync(indexHtmlPath)) {
+    let htmlContent = readFileSync(indexHtmlPath, "utf-8");
 
-  console.log('Build completed successfully!')
+    // Remove Cloudflare Web Analytics script block
+    htmlContent = htmlContent.replace(
+      /<!-- Cloudflare Web Analytics -->[\s\S]*?<!-- End Cloudflare Web Analytics -->/g,
+      "",
+    );
+
+    // Also remove the script tag if it exists without comments
+    htmlContent = htmlContent.replace(
+      /<script[^>]*src=['"]https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js['"][^>]*><\/script>/g,
+      "",
+    );
+
+    writeFileSync(indexHtmlPath, htmlContent, "utf-8");
+    console.log("Cloudflare Analytics script removed");
+  }
+
+  const pluginJson = JSON.parse(
+    readFileSync(join(__dirname, "plugin.json"), "utf-8"),
+  );
+  pluginJson.main = "index.html";
+  writeFileSync(
+    join(distDir, "plugin.json"),
+    JSON.stringify(pluginJson, null, 2),
+  );
+
+  console.log("Build completed successfully!");
 } else {
-  console.error('Error: Build output directory not found!')
-  console.error('Expected: ' + sourceDir)
-  process.exit(1)
+  console.error("Error: Build output directory not found!");
+  process.exit(1);
 }
-

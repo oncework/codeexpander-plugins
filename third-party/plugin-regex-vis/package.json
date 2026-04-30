@@ -12,6 +12,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "devDependencies": {
+    "zx": "^8.8.5"
+  },
   "scripts": {
     "build": "node ./build.mjs"
   },

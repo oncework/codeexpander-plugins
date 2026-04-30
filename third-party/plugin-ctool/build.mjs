@@ -1,46 +1,37 @@
-#!/usr/bin/env node
-import { execSync } from 'child_process'
-import { existsSync, rmSync, cpSync, readFileSync, writeFileSync, readdirSync, statSync, unlinkSync } from 'fs'
-import { join } from 'path'
+#!/usr/bin/env zx
 
-const __dirname = import.meta.dirname
+import { cd, $ } from "zx";
+import { existsSync, rmSync, cpSync } from "fs";
+import { join } from "path";
 
-function removeMapFiles(dir) {
-  const entries = readdirSync(dir, { withFileTypes: true })
-  for (const entry of entries) {
-    const fullPath = join(dir, entry.name)
-    if (entry.isDirectory()) removeMapFiles(fullPath)
-    else if (entry.name.endsWith('.map')) unlinkSync(fullPath)
-  }
-}
+const __dirname = import.meta.dirname;
 
-const submoduleDir = join(__dirname, 'Ctool')
+// Enter Ctool directory
+cd(join(__dirname, "Ctool"));
 
-console.log('Installing dependencies...')
-execSync('CI=true pnpm install --ignore-workspace', { cwd: submoduleDir, stdio: 'inherit' })
+// Install dependencies
+console.log("Installing dependencies...");
+await $`pnpm i`;
 
-console.log('Building ctool...')
-execSync('CI=true pnpm run initialize && pnpm --filter ctool-core run build', { cwd: submoduleDir, stdio: 'inherit' })
+// Build project
+console.log("Building project...");
+await $`pnpm run build`;
 
-const sourceDir = join(__dirname, 'Ctool/packages/ctool-core/dist')
-const distDir = join(__dirname, 'dist')
-
-console.log('Copying build artifacts to dist...')
-if (existsSync(distDir)) rmSync(distDir, { recursive: true, force: true })
+// Copy dist directory to parent dist
+const sourceDir = join(__dirname, "Ctool", "packages", "ctool-core", "dist");
+const distDir = join(__dirname, "dist");
 
 if (existsSync(sourceDir)) {
-  cpSync(sourceDir, distDir, { recursive: true })
-  removeMapFiles(distDir)
-  console.log('Sourcemap files removed')
+  console.log("Copying dist directory to parent...");
 
-  const pluginJson = JSON.parse(readFileSync(join(__dirname, 'plugin.json'), 'utf-8'))
-  pluginJson.main = 'index.html'
-  writeFileSync(join(distDir, 'plugin.json'), JSON.stringify(pluginJson, null, 2))
+  // Remove dist directory if it exists
+  if (existsSync(distDir)) {
+    rmSync(distDir, { recursive: true, force: true });
+  }
 
-  console.log('Build completed successfully!')
+  cpSync(sourceDir, distDir, { recursive: true });
+  console.log("Build completed successfully!");
 } else {
-  console.error('Error: Build output directory not found!')
-  console.error('Expected: ' + sourceDir)
-  process.exit(1)
+  console.error("Error: source dist directory not found!");
+  process.exit(1);
 }
-

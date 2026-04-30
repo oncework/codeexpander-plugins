@@ -1,45 +1,38 @@
-#!/usr/bin/env node
-import { execSync } from 'child_process'
-import { existsSync, rmSync, cpSync, readFileSync, writeFileSync, readdirSync, statSync, unlinkSync } from 'fs'
-import { join } from 'path'
+#!/usr/bin/env zx
 
-const __dirname = import.meta.dirname
+import { cd, $ } from "zx";
+import { readFileSync, writeFileSync } from "fs";
+import { join } from "path";
 
-function removeMapFiles(dir) {
-  const entries = readdirSync(dir, { withFileTypes: true })
-  for (const entry of entries) {
-    const fullPath = join(dir, entry.name)
-    if (entry.isDirectory()) removeMapFiles(fullPath)
-    else if (entry.name.endsWith('.map')) unlinkSync(fullPath)
-  }
-}
+const __dirname = import.meta.dirname;
 
-const submoduleDir = join(__dirname, 'Method-Draw')
+// Build Method-Draw and copy output to dist directory
+cd(join(__dirname, "Method-Draw"));
 
-console.log('Installing dependencies...')
-execSync('npm install', { cwd: submoduleDir, stdio: 'inherit' })
+// Install dependencies
+await $`npm i`;
 
-console.log('Building method-draw...')
-execSync('npx gulp build', { cwd: submoduleDir, stdio: 'inherit' })
+// Build the project using gulp
+await $`npx gulp build`;
 
-const sourceDir = join(__dirname, 'Method-Draw/dist')
-const distDir = join(__dirname, 'dist')
+// Go back to parent directory
+cd(__dirname);
 
-console.log('Copying build artifacts to dist...')
-if (existsSync(distDir)) rmSync(distDir, { recursive: true, force: true })
+// Remove existing dist directory if it exists
+await $`rm -rf dist`;
 
-if (existsSync(sourceDir)) {
-  cpSync(sourceDir, distDir, { recursive: true })
-  removeMapFiles(distDir)
-  console.log('Sourcemap files removed')
+// Copy dist directory
+await $`cp -r Method-Draw/dist dist`;
 
-  const pluginJson = JSON.parse(readFileSync(join(__dirname, 'plugin.json'), 'utf-8'))
-  pluginJson.main = 'index.html'
-  writeFileSync(join(distDir, 'plugin.json'), JSON.stringify(pluginJson, null, 2))
+// Write plugin.json
+const distDir = join(__dirname, "dist");
+const pluginJson = JSON.parse(
+  readFileSync(join(__dirname, "plugin.json"), "utf-8"),
+);
+pluginJson.main = "index.html";
+writeFileSync(
+  join(distDir, "plugin.json"),
+  JSON.stringify(pluginJson, null, 2),
+);
 
-  console.log('Build completed successfully!')
-} else {
-  console.error('Error: Build output directory not found!')
-  console.error('Expected: ' + sourceDir)
-  process.exit(1)
-}
+console.log("Build completed successfully!");

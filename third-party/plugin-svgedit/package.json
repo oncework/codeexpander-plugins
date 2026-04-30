@@ -12,6 +12,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "devDependencies": {
+    "glob": "^13.0.0",
+    "zx": "^8.8.5"
+  },
   "scripts": {
     "build": "node ./build.mjs"
   },

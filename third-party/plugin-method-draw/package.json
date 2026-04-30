@@ -22,5 +22,8 @@
     "svg",
     "draw",
     "vector"
-  ]
+  ],
+  "devDependencies": {
+    "zx": "^8.8.5"
+  }
 }

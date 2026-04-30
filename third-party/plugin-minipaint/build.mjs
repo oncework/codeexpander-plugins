@@ -1,46 +1,81 @@
-#!/usr/bin/env node
-import { execSync } from 'child_process'
-import { existsSync, rmSync, cpSync, readFileSync, writeFileSync, readdirSync, statSync, unlinkSync } from 'fs'
-import { join } from 'path'
+#!/usr/bin/env zx
 
-const __dirname = import.meta.dirname
+import { cd, $ } from "zx";
+import {
+  existsSync,
+  rmSync,
+  cpSync,
+  mkdirSync,
+  readFileSync,
+  writeFileSync,
+} from "fs";
+import { join } from "path";
+import { glob } from "glob";
 
-function removeMapFiles(dir) {
-  const entries = readdirSync(dir, { withFileTypes: true })
-  for (const entry of entries) {
-    const fullPath = join(dir, entry.name)
-    if (entry.isDirectory()) removeMapFiles(fullPath)
-    else if (entry.name.endsWith('.map')) unlinkSync(fullPath)
-  }
+const __dirname = import.meta.dirname;
+
+// Enter miniPaint directory
+cd(join(__dirname, "miniPaint"));
+
+// Install dependencies
+console.log("Installing dependencies...");
+await $`npm install`;
+
+// Build project
+console.log("Building miniPaint...");
+await $`npm run build`;
+
+// Return to parent directory
+cd(__dirname);
+
+// Define source and destination paths
+const miniPaintDir = join(__dirname, "miniPaint");
+const distDir = join(__dirname, "dist");
+const distDistDir = join(distDir, "dist");
+
+// Clean and create dist directory
+console.log("Copying build artifacts to dist...");
+
+if (existsSync(distDir)) {
+  rmSync(distDir, { recursive: true, force: true });
 }
 
-const submoduleDir = join(__dirname, 'miniPaint')
+mkdirSync(distDistDir, { recursive: true });
 
-console.log('Installing dependencies...')
-execSync('CI=true npm install', { cwd: submoduleDir, stdio: 'inherit' })
-
-console.log('Building minipaint...')
-execSync('CI=true npm run build', { cwd: submoduleDir, stdio: 'inherit' })
-
-const sourceDir = join(__dirname, 'miniPaint/dist')
-const distDir = join(__dirname, 'dist')
-
-console.log('Copying build artifacts to dist...')
-if (existsSync(distDir)) rmSync(distDir, { recursive: true, force: true })
-
-if (existsSync(sourceDir)) {
-  cpSync(sourceDir, distDir, { recursive: true })
-  removeMapFiles(distDir)
-  console.log('Sourcemap files removed')
-
-  const pluginJson = JSON.parse(readFileSync(join(__dirname, 'plugin.json'), 'utf-8'))
-  pluginJson.main = 'index.html'
-  writeFileSync(join(distDir, 'plugin.json'), JSON.stringify(pluginJson, null, 2))
-
-  console.log('Build completed successfully!')
-} else {
-  console.error('Error: Build output directory not found!')
-  console.error('Expected: ' + sourceDir)
-  process.exit(1)
+// Copy build artifacts to dist/dist directory
+const sourceDistDir = join(miniPaintDir, "dist");
+if (existsSync(sourceDistDir)) {
+  cpSync(sourceDistDir, distDistDir, { recursive: true });
 }
 
+// Copy index.html to dist directory
+const indexHtmlPath = join(miniPaintDir, "index.html");
+if (existsSync(indexHtmlPath)) {
+  cpSync(indexHtmlPath, join(distDir, "index.html"));
+}
+
+// Copy images directory
+const imagesDir = join(miniPaintDir, "images");
+if (existsSync(imagesDir)) {
+  cpSync(imagesDir, join(distDir, "images"), { recursive: true });
+}
+
+// Remove all .map files from dist directory
+console.log("Removing sourcemap files...");
+const mapFiles = await glob("**/*.map", { cwd: distDir, absolute: true });
+mapFiles.forEach((mapFile) => {
+  rmSync(mapFile, { force: true });
+});
+console.log(`Removed ${mapFiles.length} sourcemap file(s)`);
+
+// Write plugin.json
+const pluginJson = JSON.parse(
+  readFileSync(join(__dirname, "plugin.json"), "utf-8"),
+);
+pluginJson.main = "index.html";
+writeFileSync(
+  join(distDir, "plugin.json"),
+  JSON.stringify(pluginJson, null, 2),
+);
+
+console.log("Build completed successfully!");
